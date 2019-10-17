@@ -3,7 +3,7 @@ var proto = lottie.loadAnimation({
    container: document.getElementById('scene-1'),
    renderer: 'svg',
    loop: false,
-   autoplay: true,
+   autoplay: false,
    path: 'proto-scenes/scene-1/data.json'
 })
 
@@ -11,7 +11,7 @@ var protoTwo = lottie.loadAnimation({
    container: document.getElementById('scene-2'),
    renderer: 'svg',
    loop: false,
-   autoplay: true,
+   autoplay: false,
    path: 'proto-scenes/scene-2/data.json'
 })
 
@@ -33,18 +33,30 @@ function goFS() {
    proto.requestFullscreen();
 }
 
+
+//////////////    key press events   ////////////////////
+
 // enter fire
-document.body.onkeyup = function(e){
-   if(e.keyCode == 13){
-       console.log("enter pressed")
-       goFS();
-   }
-}
+window.addEventListener("keydown", event => {
+  if (event.keyCode == 13) {
+    console.log("enter pressed")
+    goFS();
+  }
+});
 
 //space fire
-document.body.onkeyup = function(e){
-   if(e.keyCode == 32){
-       console.log("space pressed")
-       sceneChanger();
-   }
-}
+window.addEventListener("keydown", event => {
+  if (event.keyCode == 32) {
+    console.log("space pressed")
+    proto.play();
+  }
+});
+
+// right fire
+window.addEventListener("keydown", event => {
+  if (event.keyCode == 39) {
+    console.log("right pressed")
+    sceneChanger();
+    protoTwo.play();
+  }
+});

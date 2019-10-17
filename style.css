@@ -1,12 +1,15 @@
 .container {
    margin: 0 auto;
    max-width: 900px;
-   height: 100vh;
 }
 
 #proto-box {
    margin: auto 0;
    /* width: 1; */
+}
+
+.scene {
+  height: 100vh;
 }
 
 #proto-2 {
