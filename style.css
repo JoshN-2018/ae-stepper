@@ -1,0 +1,23 @@
+.container {
+   margin: 0 auto;
+   max-width: 900px;
+   height: 100vh;
+}
+
+#proto-box {
+   margin: auto 0;
+   /* width: 1; */
+}
+
+#proto-2 {
+  display: none;
+}
+
+/* js classes */
+.off {
+  display: none !important;
+}
+
+.on {
+  display: initial !important;
+}
