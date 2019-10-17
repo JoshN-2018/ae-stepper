@@ -15,6 +15,7 @@ var protoTwo = lottie.loadAnimation({
    path: 'proto-scenes/scene-2/data.json'
 })
 
+
 //collect scenes
 var sceneOne = document.getElementById('scene-1')
 var sceneTwo = document.getElementById('scene-2')
@@ -26,34 +27,24 @@ function sceneChanger () {
   sceneTwo.classList.add("on");
 }
 
+//full screen function
+function goFS() {
+   var proto = document.getElementById("proto-box");
+   proto.requestFullscreen();
+}
 
+// enter fire
+document.body.onkeyup = function(e){
+   if(e.keyCode == 13){
+       console.log("enter pressed")
+       goFS();
+   }
+}
 
-
-
-// button.addEventListener("click", function(){
-//    console.log("clicked");
-//    vidCont.classList.add("shrink");
-//    tick.classList.add("grow");
-// });
-
-// change scene (space-bar)
-// eventTarget.addEventListener("keydown", sceneChanger);
+//space fire
 document.body.onkeyup = function(e){
    if(e.keyCode == 32){
        console.log("space pressed")
        sceneChanger();
    }
 }
-//
-// eventTarget.addEventListener("keydown", event => {
-//   if (event.isComposing || event.keyCode === 32) {
-//     return;
-//   }
-
-
-// full screen
-var goFS = document.getElementById("goFS");
-goFS.addEventListener("click", function() {
-    var proto = document.getElementById("proto-box");
-    proto.requestFullscreen();
-}, false);
