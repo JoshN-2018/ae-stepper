@@ -28,4 +28,7 @@
 p {
   text-align: center;
   font-family: sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.25rem;
 }
