@@ -24,3 +24,8 @@
 .on {
   display: initial !important;
 }
+
+p {
+  text-align: center;
+  font-family: sans-serif;
+}

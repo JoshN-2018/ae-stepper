@@ -53,7 +53,7 @@ var sceneFour = document.getElementById('scene-4')
 var sceneFive = document.getElementById('scene-5')
 
 //displayed scenes array
-var displayedScenes = document.getElementsByClassName("display");
+var displayedScenes = document.getElementsByClassName("scene");
 
 
 
