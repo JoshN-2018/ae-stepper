@@ -50,10 +50,10 @@ var sceneOne = document.getElementById('scene-1')
 var sceneTwo = document.getElementById('scene-2')
 var sceneThree = document.getElementById('scene-3')
 var sceneFour = document.getElementById('scene-4')
-var sceneFour = document.getElementById('scene-5')
+var sceneFive = document.getElementById('scene-5')
 
-//collect scenes array
-var allScenes = document.getElementsByClassName("scene");
+//displayed scenes array
+var displayedScenes = document.getElementsByClassName("display");
 
 
 
@@ -61,43 +61,35 @@ var allScenes = document.getElementsByClassName("scene");
 
 
 // Scene prep
-var sceneNext = 1
+var sceneNext = 2
 
 function turnOffLaterScenes () {
-   for (var i = 0; i < allScenes.length; i++) {
-      allScenes[i].classList.add("off");
+   for (var i = 0; i < displayedScenes.length; i++) {
+      displayedScenes[i].classList.add("off");
    }
 }
 turnOffLaterScenes ();
-sceneOne.classList.remove("off"); //turning back on the 1st scene
+sceneOne.classList.toggle("off"); //turning back on the 1st scene
 
 
 
 //scene change function
 function sceneChanger () {
-  if (sceneNext === 1) {
-    sceneOne.classList.add("off");
-    sceneTwo.classList.add("on");
-    sceneNext = 2
-    console.log(sceneNext);
+  if (sceneNext === 2) {
+    sceneOne.classList.toggle("off");
+    sceneTwo.classList.toggle('off'); // toggling the off class turns scenes on
   }
-    else if (sceneNext === 2) {
-    sceneTwo.classList.add("off");
-    sceneThree.classList.add("on");
-    sceneNext = 3
-    console.log(sceneNext);
+    else if (sceneNext === 3) {
+    sceneTwo.classList.toggle("off");
+    sceneThree.classList.toggle('off');
   }
-  else if (sceneNext === 3) {
-  sceneThree.classList.add("off");
-  sceneFour.classList.add("on");
-  sceneNext = 4
-  console.log(sceneNext);
+    else if (sceneNext === 4) {
+    sceneThree.classList.toggle("off");
+    sceneFour.classList.toggle('off');
   }
-  else if (sceneNext === 4) {
-  sceneFour.classList.add("off");
-  sceneFive.classList.add("on");
-  sceneNext = 5
-  console.log(sceneNext);
+  else if (sceneNext === 5) {
+    sceneFour.classList.toggle("off");
+    sceneFive.classList.toggle('off');
   }
 }
 
@@ -106,19 +98,27 @@ function sceneChanger () {
 function scenePlayer () {
   if (sceneNext === 2) {
     sceneTwoAnim.play();
+    sceneNext = 3
     console.log("playing-scene-2");
+    console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 3) {
     sceneThreeAnim.play();
+    sceneNext = 4
     console.log("playing-scene-3");
+    console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 4) {
     sceneFourAnim.play();
+    sceneNext = 5
     console.log("playing-scene-4");
+    console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 5) {
     sceneFiveAnim.play();
+    sceneNext = 6
     console.log("playing-scene-5");
+    console.log('next scene is ' + sceneNext);
   }
 }
 
