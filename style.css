@@ -1,6 +1,6 @@
 .container {
    margin: 0 auto;
-   max-width: 900px;
+   /* max-width: 900px; */
 }
 
 #proto-box {
@@ -16,14 +16,30 @@
   display: none;
 }
 
+.interactive-layer {
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  /* margin-right: 30rem; */
+  position: fixed;
+  z-index: 2;
+}
+
+.button {
+  background-color: red;
+  height: 280px;
+  width: 280px;
+  position: absolute;
+  left: 1574px;
+  top: 81.9%;
+
+}
+
 /* js classes */
 .off {
   display: none !important;
 }
 
-.on {
-  display: initial !important;
-}
 
 p {
   text-align: center;
