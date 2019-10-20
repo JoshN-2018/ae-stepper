@@ -139,6 +139,7 @@ window.addEventListener("keydown", event => {
   if (event.keyCode == 13) {
     console.log("enter pressed")
     goFS();
+    document.getElementById("interLayer").style.width = "590px";
   }
 });
 
