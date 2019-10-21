@@ -72,6 +72,20 @@ turnOffLaterScenes ();
 sceneOne.classList.toggle("off"); //turning back on the 1st scene
 
 
+// set interactive layer width
+var interLayers = document.getElementsByClassName("interLayer");
+var interLayerWidth = interLayers[0].element.offsetWidth;
+
+
+function interWidthSetter {
+
+  for (var i = 0; i < interLayers.length; i++) {
+     interLayers[i].document.style = (interLayerWidth + "px")
+}
+
+interWidthSetter();
+
+
 
 //scene change function
 function sceneChanger () {
@@ -140,6 +154,7 @@ window.addEventListener("keydown", event => {
     console.log("enter pressed")
     goFS();
     document.getElementById("interLayer").style.width = "590px";
+    interWidthSetter();
   }
 });
 
