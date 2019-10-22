@@ -74,13 +74,16 @@ sceneOne.classList.toggle("off"); //turning back on the 1st scene
 
 // set interactive layer width
 var interLayers = document.getElementsByClassName("interLayer");
-var interLayerWidth = interLayers[0].element.offsetWidth;
-
-
-function interWidthSetter {
-
+// var interLayerWidth = interLayers[0].offsetWidth;
+// var interLayerWidth = document.getElementById("scene-1").offsetWidth;
+var interHeight = document.getElementById("proto-box").offsetHeight;
+var interLayerWidth = interHeight / 16 * 9
+//
+function interWidthSetter () {
   for (var i = 0; i < interLayers.length; i++) {
-     interLayers[i].document.style = (interLayerWidth + "px")
+     interLayers[i].style.width = (interLayerWidth + "px")
+   }
+   console.log("interLayerWidth is " + interLayerWidth + "px")
 }
 
 interWidthSetter();
@@ -153,7 +156,7 @@ window.addEventListener("keydown", event => {
   if (event.keyCode == 13) {
     console.log("enter pressed")
     goFS();
-    document.getElementById("interLayer").style.width = "590px";
+    // document.getElementById("interLayer").style.width = "590px";
     interWidthSetter();
   }
 });
