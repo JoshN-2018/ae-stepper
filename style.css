@@ -37,10 +37,10 @@
 .button {
   background-color: red;
   height: 6.2%;  /* 120px*/
-  width: 27.7%; /* 300px*/ /*will need to provide these values from JS  */
+  width: 27.7%; /* 300px*/ /*will need to provide these values from CSS variables for designer input*/
   position: absolute;
-  left: calc(50% - 100px);
-  top: calc(50% - 30px);
+  left: calc(50% - 27.7% / 2);
+  top: calc(50% - 6.2% / 2);
 }
 
 
