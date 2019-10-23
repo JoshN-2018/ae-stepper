@@ -43,8 +43,6 @@ var sceneFiveAnim = lottie.loadAnimation({
 })
 
 
-
-
 //collect scenes
 var sceneOne = document.getElementById('scene-1')
 var sceneTwo = document.getElementById('scene-2')
@@ -52,9 +50,22 @@ var sceneThree = document.getElementById('scene-3')
 var sceneFour = document.getElementById('scene-4')
 var sceneFive = document.getElementById('scene-5')
 
-//displayed scenes array
+// displayed scenes array
 var displayedScenes = document.getElementsByClassName("scene");
 
+// displayed interlayers array
+var interLayers = document.getElementsByClassName("interLayer");
+
+// interlayer dimension values
+var heightRatio = 16
+var widthRatio = 9
+var interHeight = 0
+var interLayerWidth = 0
+
+function dimensionValuesGetter() {
+  interHeight = document.getElementById("proto-box").offsetHeight;
+  interLayerWidth = interHeight / heightRatio * widthRatio
+}
 
 
 ////////////////////    Scene logic   ////////////////////
@@ -63,35 +74,27 @@ var displayedScenes = document.getElementsByClassName("scene");
 // Scene prep
 var sceneNext = 2
 
-function turnOffLaterScenes () {
+function turnOffLaterScenes() {
    for (var i = 0; i < displayedScenes.length; i++) {
       displayedScenes[i].classList.add("off");
    }
 }
-turnOffLaterScenes ();
+turnOffLaterScenes();
 sceneOne.classList.toggle("off"); //turning back on the 1st scene
 
 
-// set interactive layer width
-var interLayers = document.getElementsByClassName("interLayer");
-// var interLayerWidth = interLayers[0].offsetWidth;
-// var interLayerWidth = document.getElementById("scene-1").offsetWidth;
-var interHeight = document.getElementById("proto-box").offsetHeight;
-var interLayerWidth = interHeight / 16 * 9
-//
-function interWidthSetter () {
+function interWidthSetter() {
   for (var i = 0; i < interLayers.length; i++) {
      interLayers[i].style.width = (interLayerWidth + "px")
    }
    console.log("interLayerWidth is " + interLayerWidth + "px")
 }
 
-interWidthSetter();
 
 
 
 //scene change function
-function sceneChanger () {
+function sceneChanger() {
   if (sceneNext === 2) {
     sceneOne.classList.toggle("off");
     sceneTwo.classList.toggle('off'); // toggling the off class turns scenes on
@@ -156,7 +159,7 @@ window.addEventListener("keydown", event => {
   if (event.keyCode == 13) {
     console.log("enter pressed")
     goFS();
-    // document.getElementById("interLayer").style.width = "590px";
+    dimensionValuesGetter();
     interWidthSetter();
   }
 });
@@ -175,6 +178,11 @@ window.addEventListener("keydown", event => {
   if (event.keyCode == 39) {
     console.log("right pressed")
     sceneChanger();
-    scenePlayer ();
+    scenePlayer();
   }
 });
+
+
+// First load function calls
+dimensionValuesGetter();
+interWidthSetter();
