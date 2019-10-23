@@ -65,6 +65,7 @@ var interLayerWidth = 0
 function dimensionValuesGetter() {
   interHeight = document.getElementById("proto-box").offsetHeight;
   interLayerWidth = interHeight / heightRatio * widthRatio
+  console.log("dimensions fetched");
 }
 
 
@@ -87,7 +88,7 @@ function interWidthSetter() {
   for (var i = 0; i < interLayers.length; i++) {
      interLayers[i].style.width = (interLayerWidth + "px")
    }
-   console.log("interLayerWidth is " + interLayerWidth + "px")
+   console.log("dimesnions set: width is " + interLayerWidth + "px")
 }
 
 

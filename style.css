@@ -36,8 +36,8 @@
 
 .button {
   background-color: red;
-  height: 60px;
-  width: 200px;
+  height: 6.2%;  /* 120px*/
+  width: 27.7%; /* 300px*/ /*will need to provide these values from JS  */
   position: absolute;
   left: calc(50% - 100px);
   top: calc(50% - 30px);
