@@ -50,6 +50,13 @@ var sceneThree = document.getElementById('scene-3')
 var sceneFour = document.getElementById('scene-4')
 var sceneFive = document.getElementById('scene-5')
 
+//collect inter layers
+var interOne = document.getElementById('inter-1')
+var interTwo = document.getElementById('inter-2')
+var interThree = document.getElementById('inter-3')
+var interFour = document.getElementById('inter-4')
+var interFive = document.getElementById('inter-5')
+
 // displayed scenes array
 var displayedScenes = document.getElementsByClassName("scene");
 
@@ -75,6 +82,7 @@ function dimensionValuesGetter() {
 // Scene prep
 var sceneNext = 2
 
+// turn off later scenes
 function turnOffLaterScenes() {
    for (var i = 0; i < displayedScenes.length; i++) {
       displayedScenes[i].classList.add("off");
@@ -82,6 +90,15 @@ function turnOffLaterScenes() {
 }
 turnOffLaterScenes();
 sceneOne.classList.toggle("off"); //turning back on the 1st scene
+
+// turn off later inter layers
+function turnOffLaterInters() {
+   for (var i = 0; i < interLayers.length; i++) {
+      interLayers[i].classList.add("off");
+   }
+}
+turnOffLaterScenes();
+interOne.classList.toggle("off"); //turning back on the 1st inter
 
 
 function interWidthSetter() {
