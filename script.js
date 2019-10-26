@@ -160,8 +160,17 @@ window.addEventListener("keydown", event => {
   if (event.keyCode == 13) {
     console.log("enter pressed")
     goFS();
-    dimensionValuesGetter();
-    interWidthSetter();
+    setTimeout(function(){dimensionValuesGetter(); }, 150);
+    setTimeout(function(){interWidthSetter(); }, 200);
+  }
+});
+
+// exit fire
+window.addEventListener("keydown", event => {
+  if (event.keyCode == 27) {
+    console.log("exit pressed")
+    setTimeout(function(){dimensionValuesGetter(); }, 250);
+    setTimeout(function(){interWidthSetter(); }, 300);
   }
 });
 
