@@ -63,6 +63,10 @@ var displayedScenes = document.getElementsByClassName("scene");
 // displayed interlayers array
 var interLayers = document.getElementsByClassName("interLayer");
 
+// buttons array
+var buttons = document.getElementsByClassName('button');
+
+
 // interlayer dimension values
 var heightRatio = 16
 var widthRatio = 9
@@ -76,7 +80,7 @@ var sceneNext = 2
 
 ////////////////////    Scene Prep   ////////////////////
 
-
+// fetch dimensions for dimensions setter (interwidthSetter)
 function dimensionValuesGetter() {
   interHeight = document.getElementById("proto-box").offsetHeight;
   interLayerWidth = interHeight / heightRatio * widthRatio
@@ -114,6 +118,17 @@ function interWidthSetter() {
    }
    console.log("dimensions set: width is " + interLayerWidth + "px")
 }
+
+
+
+// add listeners
+function addButtonListeners() {
+   for (var i = 0; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", buttonActions);
+     buttons[i].style.backgroundColor = "yellow";
+   }
+}
+addButtonListeners();
 
 
 
@@ -239,6 +254,13 @@ window.addEventListener("keydown", event => {
     scenePlayer();
   }
 });
+
+// button Fire
+function buttonActions() {
+  sceneChanger();
+  interChanger();
+  scenePlayer();
+}
 
 
 // First load function calls
