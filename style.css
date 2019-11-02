@@ -40,6 +40,21 @@
   top: calc(50% - 6.2% / 2);
 }
 
+#inter-1 {
+  border: 4px solid red;
+}
+#inter-2 {
+  border: 4px solid green;
+}
+#inter-3 {
+  border: 4px solid blue;
+}
+#inter-4 {
+  border: 4px solid yellow;
+}
+#inter-5 {
+  border: 4px solid pink;
+}
 
 
 /* js classes */

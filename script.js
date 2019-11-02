@@ -69,18 +69,20 @@ var widthRatio = 9
 var interHeight = 0
 var interLayerWidth = 0
 
+// Scene
+var sceneNext = 2
+
+
+
+////////////////////    Scene Prep   ////////////////////
+
+
 function dimensionValuesGetter() {
   interHeight = document.getElementById("proto-box").offsetHeight;
   interLayerWidth = interHeight / heightRatio * widthRatio
   console.log("dimensions fetched");
 }
 
-
-////////////////////    Scene logic   ////////////////////
-
-
-// Scene prep
-var sceneNext = 2
 
 // turn off later scenes
 function turnOffLaterScenes() {
@@ -92,6 +94,8 @@ function turnOffLaterScenes() {
 turnOffLaterScenes();
 sceneOne.classList.toggle("off"); //turning back on the 1st scene
 
+
+
 // turn off later inter layers
 function turnOffLaterInters() {
    for (var i = 0; i < interLayers.length; i++) {
@@ -99,11 +103,11 @@ function turnOffLaterInters() {
    }
    console.log("later inters off");
 }
-
 turnOffLaterInters();
 interOne.classList.toggle("off"); //turning back on the 1st inter
 
 
+// Set widths for all inter layers
 function interWidthSetter() {
   for (var i = 0; i < interLayers.length; i++) {
      interLayers[i].style.width = (interLayerWidth + "px")
@@ -112,6 +116,8 @@ function interWidthSetter() {
 }
 
 
+
+////////////////////    Scene logic   ////////////////////
 
 
 //scene change function
@@ -131,6 +137,27 @@ function sceneChanger() {
   else if (sceneNext === 5) {
     sceneFour.classList.toggle("off");
     sceneFive.classList.toggle('off');
+  }
+}
+
+
+//inter change function
+function interChanger() {
+  if (sceneNext === 2) {
+    interOne.classList.toggle("off");
+    interTwo.classList.toggle('off'); // toggling the off class turns scenes on
+  }
+    else if (sceneNext === 3) {
+    interTwo.classList.toggle("off");
+    interThree.classList.toggle('off');
+  }
+    else if (sceneNext === 4) {
+    interThree.classList.toggle("off");
+    interFour.classList.toggle('off');
+  }
+  else if (sceneNext === 5) {
+    interFour.classList.toggle("off");
+    interFive.classList.toggle('off');
   }
 }
 
@@ -185,7 +212,7 @@ window.addEventListener("keydown", event => {
   }
 });
 
-// exit fire
+// exit fire (doesn't work)
 window.addEventListener("keydown", event => {
   if (event.keyCode == 27) {
     console.log("exit pressed")
@@ -208,6 +235,7 @@ window.addEventListener("keydown", event => {
   if (event.keyCode == 39) {
     console.log("right pressed")
     sceneChanger();
+    interChanger();
     scenePlayer();
   }
 });
