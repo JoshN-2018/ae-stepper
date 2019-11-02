@@ -125,7 +125,7 @@ function interWidthSetter() {
 function addButtonListeners() {
    for (var i = 0; i < buttons.length; i++) {
      buttons[i].addEventListener("click", buttonActions);
-     buttons[i].style.backgroundColor = "yellow";
+     console.log('button events added')
    }
 }
 addButtonListeners();

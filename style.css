@@ -1,3 +1,5 @@
+/* Set up */
+
 .container {
    margin: 0 auto;
 }
@@ -10,14 +12,6 @@
   height: 100vh;
 }
 
-.instructions {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  background-color: white;
-  opacity: 0.8;
-  z-index: 3;
-}
 
 .interLayer {
   border: 4px solid red;
@@ -40,6 +34,8 @@
   top: calc(50% - 6.2% / 2);
 }
 
+
+/* interLayer border colours */
 #inter-1 {
   border: 4px solid red;
 }
@@ -62,6 +58,17 @@
   display: none !important;
 }
 
+
+
+/* initial instructions */
+.instructions {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 3;
+}
 
 p {
   text-align: center;
