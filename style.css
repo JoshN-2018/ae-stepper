@@ -1,3 +1,6 @@
+@import 'input.css';
+
+
 /* Set up */
 
 .container {
@@ -26,12 +29,39 @@
 }
 
 .button {
-  background-color: red;
-  height: 6.2%;  /* 120px*/
-  width: 27.7%; /* 300px*/ /*will need to provide these values from CSS variables for designer input*/
   position: absolute;
-  left: calc(50% - 27.7% / 2);
-  top: calc(50% - 6.2% / 2);
+  width: var(--button-width);
+  height: var(--button-height);
+}
+
+#inter-1 .button {
+  background-color: red;
+  left: calc(var(--b1-pos-left) - var(--button-width) / 2);
+  bottom: calc(var(--b1-pos-bottom) - var(--button-height) / 2);
+}
+
+#inter-2 .button {
+  background-color: green;
+  left: calc(var(--b2-pos-left) - var(--button-width) / 2);
+  bottom: calc(var(--b2-pos-bottom) - var(--button-height) / 2);
+}
+
+#inter-3 .button {
+  background-color: blue;
+  left: calc(var(--b3-pos-left) - var(--button-width) / 2);
+  bottom: calc(var(--b3-pos-bottom) - var(--button-height) / 2);
+}
+
+#inter-4 .button {
+  background-color: yellow;
+  left: calc(var(--b4-pos-left) - var(--button-width) / 2);
+  bottom: calc(var(--b4-pos-bottom) - var(--button-height) / 2);
+}
+
+#inter-5 .button {
+  background-color: pink;
+  left: calc(var(--b5-pos-left) - var(--button-width) / 2);
+  bottom: calc(var(--b5-pos-bottom) - var(--button-height) / 2);
 }
 
 
