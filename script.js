@@ -87,6 +87,7 @@ function turnOffLaterScenes() {
    for (var i = 0; i < displayedScenes.length; i++) {
       displayedScenes[i].classList.add("off");
    }
+   console.log("later scenes off");
 }
 turnOffLaterScenes();
 sceneOne.classList.toggle("off"); //turning back on the 1st scene
@@ -96,8 +97,10 @@ function turnOffLaterInters() {
    for (var i = 0; i < interLayers.length; i++) {
       interLayers[i].classList.add("off");
    }
+   console.log("later inters off");
 }
-turnOffLaterScenes();
+
+turnOffLaterInters();
 interOne.classList.toggle("off"); //turning back on the 1st inter
 
 
@@ -105,7 +108,7 @@ function interWidthSetter() {
   for (var i = 0; i < interLayers.length; i++) {
      interLayers[i].style.width = (interLayerWidth + "px")
    }
-   console.log("dimesnions set: width is " + interLayerWidth + "px")
+   console.log("dimensions set: width is " + interLayerWidth + "px")
 }
 
 
