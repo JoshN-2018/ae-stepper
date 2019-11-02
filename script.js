@@ -214,8 +214,7 @@ function goFS() {
 
 
 
-
-////////////////////    key press events   ////////////////////
+////////////////////    Press events   ////////////////////
 
 // enter fire
 window.addEventListener("keydown", event => {
