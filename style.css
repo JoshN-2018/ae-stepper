@@ -100,10 +100,90 @@
   z-index: 3;
 }
 
-p {
-  text-align: center;
-  font-family: sans-serif;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  font-size: 1.25rem;
+/* //////////////////  Panel //////////////////// */
+
+#panel {
+   width: 280px;
+   position: fixed;
+   left: 0;
+   top: 0;
+   background-color: #FFF;
+   opacity: 0.95;
+   font-family: "Mabry", sans-serif;
+   z-index: 10;
 }
+
+/* display flex */
+.field, .current-scene, .readout-toggle {
+   display: flex;
+}
+
+.title-box {
+   padding: 38px 32px;
+   border-bottom: 1px solid #000;
+}
+
+.panel-content {
+   padding: 38px 32px;
+}
+
+.field {
+   margin-bottom: 1rem;
+}
+
+.dropdown {
+   margin-bottom: 1rem;
+}
+
+.indicator-reset {
+   padding: 38px 0 32px 0;
+}
+
+
+/* type styling */
+.label {
+   text-transform: uppercase;
+   font-size: 12px;
+}
+
+h1 {
+   font-size: 21px;
+   margin-bottom: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
