@@ -67,8 +67,6 @@ var interLayers = document.getElementsByClassName("interLayer");
 var buttons = document.getElementsByClassName('button');
 
 
-
-
 // interlayer dimension values
 var heightRatio = 16
 var widthRatio = 9
@@ -77,6 +75,38 @@ var interLayerWidth = 0
 
 // Scene
 var sceneNext = 2
+
+// Panel elements
+var tickBoxOnA = document.getElementById('tick-on-A');
+var tickBoxOffA = document.getElementById('tick-off-A');
+var tickBoxOnB = document.getElementById('tick-on-B');
+var tickBoxOffB = document.getElementById('tick-off-B');
+
+var resetButton = document.getElementById('reset');
+
+var currentSceneReadout = document.getElementById('current-scene');
+
+var readoutLeftOne = document.getElementById('Left-1');
+var readoutLeftTwo = document.getElementById('Left-2');
+var readoutLeftThree = document.getElementById('Left-3');
+var readoutLeftFour = document.getElementById('Left-4');
+var readoutLeftFive = document.getElementById('Left-5');
+var readoutLeftSix = document.getElementById('Left-6');
+var readoutLeftSeven = document.getElementById('Left-7');
+var readoutLeftEight = document.getElementById('Left-8');
+var readoutLeftNine = document.getElementById('Left-9');
+var readoutLeftTen = document.getElementById('Left-10');
+
+var readoutBottomOne = document.getElementById('Bottom-1');
+var readoutBottomTwo = document.getElementById('Bottom-2');
+var readoutBottomThree = document.getElementById('Bottom-3');
+var readoutBottomFour = document.getElementById('Bottom-4');
+var readoutBottomFive = document.getElementById('Bottom-5');
+var readoutBottomSix = document.getElementById('Bottom-6');
+var readoutBottomSeven = document.getElementById('Bottom-7');
+var readoutBottomEight = document.getElementById('Bottom-8');
+var readoutBottomNine = document.getElementById('Bottom-9');
+var readoutBottomTen = document.getElementById('Bottom-10');
 
 
 
@@ -134,16 +164,6 @@ addButtonListeners();
 
 
 
-var tickBoxOnA = document.getElementById('tick-on-A');
-var tickBoxOffA = document.getElementById('tick-off-A');
-var tickBoxOnB = document.getElementById('tick-on-B');
-var tickBoxOffB = document.getElementById('tick-off-B');
-
-var resetButton = document.getElementById('reset');
-
-
-
-
 function addPanelListeners() {
      tickBoxOnA.addEventListener("click", toggleButtonHinting);
      tickBoxOffA.addEventListener("click", toggleButtonHinting);
@@ -155,7 +175,6 @@ function addPanelListeners() {
 
      console.log('panel event listeners added')
 }
-
 addPanelListeners();
 
 
@@ -166,6 +185,8 @@ function toggleButtonHinting() {
 
    tickBoxOnA.classList.toggle("off");
    tickBoxOffA.classList.toggle("off");
+
+   /* function to go here */
 
    console.log("tickbox A clicked");
 }
@@ -180,6 +201,50 @@ function toggleHitAreas() {
    }
 
    console.log("tickbox B clicked");
+}
+
+var screenRatioX = document.getElementById('ratio-x');
+var screenRatioY = document.getElementById('ratio-y');
+
+
+function panelContentUpdater() {
+
+   // current scene readout
+   currentSceneReadout.value = sceneNext - 1;
+
+   // button position values
+   readoutLeftOne.value = 'Left ' + '0' + '%'
+   readoutLeftTwo.value = 'Left ' + '0' + '%'
+   readoutLeftThree.value = 'Left ' + '0' + '%'
+   readoutLeftFour.value = 'Left ' + '0' + '%'
+   readoutLeftFive.value = 'Left ' + '0' + '%'
+   readoutLeftSix.value = 'Left ' + '0' + '%'
+   readoutLeftSeven.value = 'Left ' + '0' + '%'
+   readoutLeftEight.value = 'Left ' + '0' + '%'
+   readoutLeftNine.value = 'Left ' + '0' + '%'
+   readoutLeftTen.value = 'Left ' + '0' + '%'
+
+   readoutBottomOne.value = 'Bottom ' + '0' + '%'
+   readoutBottomTwo.value = 'Bottom ' + '0' + '%'
+   readoutBottomThree.value = 'Bottom ' + '0' + '%'
+   readoutBottomFour.value = 'Bottom ' + '0' + '%'
+   readoutBottomFive.value = 'Bottom ' + '0' + '%'
+   readoutBottomSix.value = 'Bottom ' + '0' + '%'
+   readoutBottomSeven.value = 'Bottom ' + '0' + '%'
+   readoutBottomEight.value = 'Bottom ' + '0' + '%'
+   readoutBottomNine.value = 'Bottom ' + '0' + '%'
+   readoutBottomTen.value = 'Bottom ' + '0' + '%'
+
+   // screen ratio
+   // heightRatio = screenRatioY.value
+   // widthRatio = screenRatioX.value
+   //
+   // dimensionValuesGetter();
+   // interWidthSetter();
+
+   /* This working just need to replace zero with a variable of either the current values (left/bottom % or pull whats written in the root (input css))  */
+
+   console.log('panel content updated')
 }
 
 
@@ -265,7 +330,7 @@ function goFS() {
 
 function reset() {
    console.log("refresh requested")
-   document.refresh(); /* this function needs to be googled */
+   // document.refresh(); /* the structure for this function works I just need to google the JS for refreshing the page */
 }
 
 
@@ -296,6 +361,7 @@ window.addEventListener("keydown", event => {
     console.log("space pressed")
     console.log("playing-scene-1");
     sceneOneAnim.play();
+    panelContentUpdater();
   }
 });
 
@@ -306,6 +372,7 @@ window.addEventListener("keydown", event => {
     sceneChanger();
     interChanger();
     scenePlayer();
+    panelContentUpdater();
   }
 });
 
@@ -314,9 +381,11 @@ function buttonActions() {
   sceneChanger();
   interChanger();
   scenePlayer();
+  panelContentUpdater();
 }
 
 
 // First load function calls
 dimensionValuesGetter();
 interWidthSetter();
+panelContentUpdater();

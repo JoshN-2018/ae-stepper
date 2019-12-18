@@ -23,22 +23,27 @@
             <div class="controls">
 
                <div class="instructions">
-                  <h1>'ENTER' for full-screen</h1>
                   <h1>'SPACE' to start</h1>
                   <h1>'RIGHT' for next scene</h1>
+                  <h1>'ENTER' for full-screen</h1>
                </div>
 
                <div class="dropdown">
                   <p class="label">screen ratio</p>
                   <div class="container-flex">
-                     <select>
+                     <select id="ratio-x">
                         <option value="16">16</option>
                         <option value="18">18</option>
+                        <option value="9">9</option>
+                        <option value="9">10</option>
+
                      </select>
                      <h1>:</h1>
-                     <select>
+                     <select id="ratio-y">
                         <option value="9">9</option>
-                        <option value="9">9</option>
+                        <option value="9">10</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
                      </select>
                   </div>
                </div>
@@ -62,7 +67,7 @@
             <div class="indicator-reset">
                <div class="current-scene container-flex">
                   <h1>Current Scene:</h1>
-                  <h1 class="scene-number">0</h1>
+                  <output id="current-scene">0</output>
                </div>
                <h1 id="reset" class="reset">Reset</h1>
             </div>
@@ -77,54 +82,54 @@
             <!-- readouts -->
             <div class="readout-wrapper">
                <div class="readout">
-                 <p class="label first">#1</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#1</output>
+                 <output id="Left-1" class="label">Left: 50%</output>
+                 <output id="Bottom-1" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#2</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#2</output>
+                 <output id="Left-2" class="label">Left: 50%</output>
+                 <output id="Bottom-2" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#3</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#3</output>
+                 <output id="Left-3" class="label">Left: 50%</output>
+                 <output id="Bottom-3" class="label">Bottom: 50%</output>
                </div>
               <div class="readout">
-                 <p class="label first">#4</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#4</output>
+                 <output id="Left-4" class="label">Left: 50%</output>
+                 <output id="Bottom-4" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#5</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#5</output>
+                 <output id="Left-5" class="label">Left: 50%</output>
+                 <output id="Bottom-5" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#6</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#6</output>
+                 <output id="Left-6" class="label">Left: 50%</output>
+                 <output id="Bottom-6" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#7</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#7</output>
+                 <output id="Left-7" class="label">Left: 50%</output>
+                 <output id="Bottom-7" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#8</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#8</output>
+                 <output id="Left-8" class="label">Left: 50%</output>
+                 <output id="Bottom-8" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#9</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#9</output>
+                 <output id="Left-9" class="label">Left: 50%</output>
+                 <output id="Bottom-9" class="label">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <p class="label first">#10</p>
-                 <p class="label second">Left: 50%</p>
-                 <p class="label third">Bottom: 50%</p>
+                 <output class="label">#10</output>
+                 <output id="Left-10" class="label">Left: 50%</output>
+                 <output id="Bottom-10" class="label">Bottom: 50%</output>
                </div>
             </div>
 
