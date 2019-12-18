@@ -142,6 +142,8 @@ var tickBoxOffB = document.getElementById('tick-off-B');
 var resetButton = document.getElementById('reset');
 
 
+
+
 function addPanelListeners() {
      tickBoxOnA.addEventListener("click", toggleButtonHinting);
      tickBoxOffA.addEventListener("click", toggleButtonHinting);
@@ -172,6 +174,10 @@ function toggleHitAreas() {
 
    tickBoxOnB.classList.toggle("off");
    tickBoxOffB.classList.toggle("off");
+
+   for (var i = 0; i < interLayers.length; i++) {
+      interLayers[i].classList.toggle("hit-area-show");
+   }
 
    console.log("tickbox B clicked");
 }

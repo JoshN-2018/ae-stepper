@@ -30,6 +30,7 @@ html {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
+  opacity: 0;
 }
 
 .button {
@@ -94,6 +95,10 @@ html {
 /* js classes */
 .off {
   display: none !important;
+}
+
+.hit-area-show {
+   opacity: 1 !important;
 }
 
 
