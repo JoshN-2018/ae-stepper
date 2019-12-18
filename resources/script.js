@@ -67,6 +67,8 @@ var interLayers = document.getElementsByClassName("interLayer");
 var buttons = document.getElementsByClassName('button');
 
 
+
+
 // interlayer dimension values
 var heightRatio = 16
 var widthRatio = 9
@@ -129,6 +131,58 @@ function addButtonListeners() {
    }
 }
 addButtonListeners();
+
+
+
+
+var tickBoxOn = document.getElementsByClassName('tick-on');
+var tickBoxOff = document.getElementsByClassName('tick-off');
+var scopeHinting = document.querySelector('#hinting');
+var scopeHitAreas = document.querySelector('#hit-areas');
+
+
+function addToggleListeners() {
+   for (var i = 0; i < tickBoxOn.length; i++) {
+     tickBoxOn[i].addEventListener("click", toggleButtonHinting);
+     console.log('tick-box-on events added')
+   }
+   for (var i = 0; i < tickBoxOff.length; i++) {
+     tickBoxOff[i].addEventListener("click", toggleButtonHinting);
+     console.log('tick-box-off events added')
+   }
+}
+
+addToggleListeners();
+
+
+////////////////////   Panel modifiers   ////////////////////
+
+function toggleButtonHinting() {
+
+
+   /* Part 1 — turning off the clicked tick box and turning on the opposing state */
+
+   // Get the clicked info button
+   const tickBoxOn = event.target;
+
+   // Get the parent element of the button: #tip-section
+   // This will be our scope
+   const parentElement = scopeHinting.parentElement;
+
+   // The tipbox inside of the parent element.
+   const tickBox = parentElement.querySelector('.tick-box-on');
+
+   // Toggle the class on the tipbox, by toggeling you don't need a seperate closing function
+   tickBox.classList.toggle("off");
+
+   console.log("toggle clicked");
+
+
+
+   /* Part 2 — turning off the clicked tick box and turning on the opposing state */
+
+}
+
 
 
 
