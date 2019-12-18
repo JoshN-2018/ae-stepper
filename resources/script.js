@@ -134,56 +134,47 @@ addButtonListeners();
 
 
 
+var tickBoxOnA = document.getElementById('tick-on-A');
+var tickBoxOffA = document.getElementById('tick-off-A');
+var tickBoxOnB = document.getElementById('tick-on-B');
+var tickBoxOffB = document.getElementById('tick-off-B');
 
-var tickBoxOn = document.getElementsByClassName('tick-on');
-var tickBoxOff = document.getElementsByClassName('tick-off');
-var scopeHinting = document.querySelector('#hinting');
-var scopeHitAreas = document.querySelector('#hit-areas');
+var resetButton = document.getElementById('reset');
 
 
-function addToggleListeners() {
-   for (var i = 0; i < tickBoxOn.length; i++) {
-     tickBoxOn[i].addEventListener("click", toggleButtonHinting);
-     console.log('tick-box-on events added')
-   }
-   for (var i = 0; i < tickBoxOff.length; i++) {
-     tickBoxOff[i].addEventListener("click", toggleButtonHinting);
-     console.log('tick-box-off events added')
-   }
+function addPanelListeners() {
+     tickBoxOnA.addEventListener("click", toggleButtonHinting);
+     tickBoxOffA.addEventListener("click", toggleButtonHinting);
+
+     tickBoxOnB.addEventListener("click", toggleHitAreas);
+     tickBoxOffB.addEventListener("click", toggleHitAreas);
+
+     resetButton.addEventListener("click", reset);
+
+     console.log('panel event listeners added')
 }
 
-addToggleListeners();
+addPanelListeners();
+
 
 
 ////////////////////   Panel modifiers   ////////////////////
 
 function toggleButtonHinting() {
 
+   tickBoxOnA.classList.toggle("off");
+   tickBoxOffA.classList.toggle("off");
 
-   /* Part 1 — turning off the clicked tick box and turning on the opposing state */
-
-   // Get the clicked info button
-   const tickBoxOn = event.target;
-
-   // Get the parent element of the button: #tip-section
-   // This will be our scope
-   const parentElement = scopeHinting.parentElement;
-
-   // The tipbox inside of the parent element.
-   const tickBox = parentElement.querySelector('.tick-box-on');
-
-   // Toggle the class on the tipbox, by toggeling you don't need a seperate closing function
-   tickBox.classList.toggle("off");
-
-   console.log("toggle clicked");
-
-
-
-   /* Part 2 — turning off the clicked tick box and turning on the opposing state */
-
+   console.log("tickbox A clicked");
 }
 
+function toggleHitAreas() {
 
+   tickBoxOnB.classList.toggle("off");
+   tickBoxOffB.classList.toggle("off");
+
+   console.log("tickbox B clicked");
+}
 
 
 ////////////////////    Scene logic   ////////////////////
@@ -266,6 +257,10 @@ function goFS() {
    proto.requestFullscreen();
 }
 
+function reset() {
+   console.log("refresh requested")
+   document.refresh(); /* this function needs to be googled */
+}
 
 
 ////////////////////    Press events   ////////////////////
