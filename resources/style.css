@@ -135,6 +135,9 @@ html {
    padding: 38px 32px;
 }
 
+.video-fill {
+   width: 100% !important;
+}
 
 
 /* elements */
@@ -216,9 +219,13 @@ select {
 
 .video-scene {
    display: none;
+   border: 5px solid red;
+   background-color: red;
 }
 
-
+.data-scene {
+   /* display: none; */
+}
 
 
 
