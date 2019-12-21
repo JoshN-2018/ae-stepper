@@ -329,8 +329,8 @@ function goFS() {
 }
 
 function reset() {
+   window.location.reload();
    console.log("refresh requested")
-   // document.refresh(); /* the structure for this function works I just need to google the JS for refreshing the page */
 }
 
 
