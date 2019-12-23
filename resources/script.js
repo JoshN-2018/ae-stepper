@@ -42,6 +42,46 @@ var sceneFiveAnim = lottie.loadAnimation({
    path: 'proto-scenes/scene-5/data.json'
 })
 
+var sceneSixAnim = lottie.loadAnimation({
+   container: document.getElementById('scene-6'),
+   renderer: 'svg',
+   loop: false,
+   autoplay: false,
+   path: 'proto-scenes/scene-5/data.json'
+})
+
+var sceneSevenAnim = lottie.loadAnimation({
+   container: document.getElementById('scene-7'),
+   renderer: 'svg',
+   loop: false,
+   autoplay: false,
+   path: 'proto-scenes/scene-5/data.json'
+})
+
+var sceneEightAnim = lottie.loadAnimation({
+   container: document.getElementById('scene-8'),
+   renderer: 'svg',
+   loop: false,
+   autoplay: false,
+   path: 'proto-scenes/scene-5/data.json'
+})
+
+var sceneNineAnim = lottie.loadAnimation({
+   container: document.getElementById('scene-9'),
+   renderer: 'svg',
+   loop: false,
+   autoplay: false,
+   path: 'proto-scenes/scene-5/data.json'
+})
+
+var sceneTenAnim = lottie.loadAnimation({
+   container: document.getElementById('scene-10'),
+   renderer: 'svg',
+   loop: false,
+   autoplay: false,
+   path: 'proto-scenes/scene-5/data.json'
+})
+
 
 //collect scenes
 var sceneOne = document.getElementById('scene-1')
@@ -49,6 +89,11 @@ var sceneTwo = document.getElementById('scene-2')
 var sceneThree = document.getElementById('scene-3')
 var sceneFour = document.getElementById('scene-4')
 var sceneFive = document.getElementById('scene-5')
+var sceneSix = document.getElementById('scene-6')
+var sceneSeven = document.getElementById('scene-7')
+var sceneEight = document.getElementById('scene-8')
+var sceneNine = document.getElementById('scene-9')
+var sceneTen = document.getElementById('scene-10')
 
 // collect first video
 var videoStart = document.getElementById('video-start')
@@ -59,6 +104,12 @@ var interTwo = document.getElementById('inter-2')
 var interThree = document.getElementById('inter-3')
 var interFour = document.getElementById('inter-4')
 var interFive = document.getElementById('inter-5')
+var interSix = document.getElementById('inter-6')
+var interSeven = document.getElementById('inter-7')
+var interEight = document.getElementById('inter-8')
+var interNine = document.getElementById('inter-9')
+var interTen = document.getElementById('inter-10')
+
 
 // displayed scenes array
 var displayedScenes = document.getElementsByClassName("scene");
@@ -206,6 +257,7 @@ function toggleHitAreas() {
    console.log("tickbox B clicked");
 }
 
+// getting dropdown and users selection
 var screenRatioX = document.getElementById('ratio-x');
 var valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
 
@@ -245,7 +297,7 @@ function panelContentUpdater() {
    readoutBottomNine.value = 'Bottom ' + style.getPropertyValue('--b9-pos-bottom');
    readoutBottomTen.value = 'Bottom ' + style.getPropertyValue('--b10-pos-bottom');
 
-   // update screen ration values from dropdown
+   // update screen ratio to user selected values from dropdown
    valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
    valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
 
@@ -280,6 +332,26 @@ function sceneChanger() {
     sceneFour.classList.toggle("off");
     sceneFive.classList.toggle('off');
   }
+  else if (sceneNext === 6) {
+    sceneFive.classList.toggle("off");
+    sceneSix.classList.toggle('off');
+  }
+  else if (sceneNext === 7) {
+    sceneSix.classList.toggle("off");
+    sceneSeven.classList.toggle('off');
+  }
+  else if (sceneNext === 8) {
+    sceneSeven.classList.toggle("off");
+    sceneEight.classList.toggle('off');
+  }
+  else if (sceneNext === 9) {
+    sceneEight.classList.toggle("off");
+    sceneNine.classList.toggle('off');
+  }
+  else if (sceneNext === 10) {
+    sceneNine.classList.toggle("off");
+    sceneTen.classList.toggle('off');
+  }
 }
 
 
@@ -297,9 +369,29 @@ function interChanger() {
     interThree.classList.toggle("off");
     interFour.classList.toggle('off');
   }
-  else if (sceneNext === 5) {
+    else if (sceneNext === 5) {
     interFour.classList.toggle("off");
     interFive.classList.toggle('off');
+  }
+    else if (sceneNext === 6) {
+    interFive.classList.toggle("off");
+    interSix.classList.toggle('off');
+  }
+    else if (sceneNext === 7) {
+    interSix.classList.toggle("off");
+    interSeven.classList.toggle('off');
+  }
+    else if (sceneNext === 8) {
+    interSeven.classList.toggle("off");
+    interEight.classList.toggle('off');
+  }
+    else if (sceneNext === 9) {
+    interEight.classList.toggle("off");
+    interNine.classList.toggle('off');
+  }
+    else if (sceneNext === 10) {
+    interNine.classList.toggle("off");
+    interTen.classList.toggle('off');
   }
 }
 
@@ -328,6 +420,36 @@ function scenePlayer () {
     sceneFiveAnim.play();
     sceneNext = 6
     console.log("playing-scene-5");
+    console.log('next scene is ' + sceneNext);
+  }
+  else if (sceneNext === 6) {
+    sceneSixAnim.play();
+    sceneNext = 7
+    console.log("playing-scene-6");
+    console.log('next scene is ' + sceneNext);
+  }
+  else if (sceneNext === 7) {
+    sceneSevenAnim.play();
+    sceneNext = 8
+    console.log("playing-scene-7");
+    console.log('next scene is ' + sceneNext);
+  }
+  else if (sceneNext === 8) {
+    sceneEightAnim.play();
+    sceneNext = 9
+    console.log("playing-scene-8");
+    console.log('next scene is ' + sceneNext);
+  }
+  else if (sceneNext === 9) {
+    sceneNineAnim.play();
+    sceneNext = 10
+    console.log("playing-scene-9");
+    console.log('next scene is ' + sceneNext);
+  }
+  else if (sceneNext === 10) {
+    sceneTenAnim.play();
+    sceneNext = 11
+    console.log("playing-scene-10");
     console.log('next scene is ' + sceneNext);
   }
 }
