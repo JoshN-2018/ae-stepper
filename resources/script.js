@@ -43,9 +43,9 @@ var sceneFiveAnim = lottie.loadAnimation({
 })
 
 // function turnOffDataScenes() {
-//    sceneOneAnim.style.opacity = 0;
+//    sceneOneAnim.document.style.opacity = 0;
 // }
-//
+// //
 // turnOffDataScenes();
 
 //collect scenes

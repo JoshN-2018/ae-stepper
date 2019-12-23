@@ -218,11 +218,7 @@ select {
 }
 
 .video-scene {
-   display: none;
-}
-
-.data-scene {
-   /* display: none; */
+   display: none;                                        
 }
 
 
