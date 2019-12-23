@@ -31,21 +31,21 @@
                <div class="dropdown">
                   <p class="label">screen ratio</p>
                   <div class="container-flex">
-                     <select id="ratio-x">
+                     <select id="ratio-x" onchange="panelContentUpdater()">  <!--Call function-->
+                        <option value="9">9</option>
+                        <option value="9">10</option>
                         <option value="16">16</option>
                         <option value="18">18</option>
                         <option value="18">19.5</option>
-                        <option value="9">9</option>
-                        <option value="9">10</option>
 
                      </select>
                      <h1>:</h1>
-                     <select id="ratio-y">
-                        <option value="9">9</option>
-                        <option value="9">10</option>
+                     <select id="ratio-y" onchange="panelContentUpdater()"> <!--Call function-->
                         <option value="16">16</option>
                         <option value="18">18</option>
                         <option value="18">19.5</option>
+                        <option value="9">9</option>
+                        <option value="9">10</option>
                      </select>
                   </div>
                </div>
@@ -151,7 +151,6 @@
            <div id="inter-2" class="interLayer"><div class="button"></div></div>
            <div id="inter-3" class="interLayer"><div class="button"></div></div>
            <div id="inter-4" class="interLayer"><div class="button"></div></div>
-           <div id="inter-5" class="interLayer"><div class="button"></div></div>
            <div id="inter-5" class="interLayer"><div class="button"></div></div>
            <div id="inter-6" class="interLayer"><div class="button"></div></div>
            <div id="inter-7" class="interLayer"><div class="button"></div></div>

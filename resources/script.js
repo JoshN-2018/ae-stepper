@@ -42,11 +42,6 @@ var sceneFiveAnim = lottie.loadAnimation({
    path: 'proto-scenes/scene-5/data.json'
 })
 
-// function turnOffDataScenes() {
-//    sceneOneAnim.document.style.opacity = 0;
-// }
-// //
-// turnOffDataScenes();
 
 //collect scenes
 var sceneOne = document.getElementById('scene-1')
@@ -212,7 +207,11 @@ function toggleHitAreas() {
 }
 
 var screenRatioX = document.getElementById('ratio-x');
+var valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
+
 var screenRatioY = document.getElementById('ratio-y');
+var valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+
 
 // style variable which contains root level variables
 var style = getComputedStyle(document.body);
@@ -222,7 +221,6 @@ function panelContentUpdater() {
 
    // current scene readout
    currentSceneReadout.value = sceneNext - 1;
-
 
    // button position values
    readoutLeftOne.value = 'Left ' + style.getPropertyValue('--b1-pos-left'); /* references the + style variable */
@@ -247,14 +245,11 @@ function panelContentUpdater() {
    readoutBottomNine.value = 'Bottom ' + style.getPropertyValue('--b9-pos-bottom');
    readoutBottomTen.value = 'Bottom ' + style.getPropertyValue('--b10-pos-bottom');
 
-   // screen ratio
-   // heightRatio = screenRatioY.value
-   // widthRatio = screenRatioX.value
-   //
-   // dimensionValuesGetter();
-   // interWidthSetter();
-
-   /* This working just need to replace zero with a variable of either the current values (left/bottom % or pull whats written in the root (input css))  */
+   // update screen ration values from dropdown
+   widthRatio = valueRatioX
+   heightRatio = valueRatioY
+   dimensionValuesGetter();
+   interWidthSetter();
 
    console.log('panel content updated')
 }

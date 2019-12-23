@@ -212,11 +212,12 @@ select {
 }
 
 
-
+/* function for hinting needs to be written but the button is there */
 #hinting {
    display: none;
 }
 
+/* comment this out to use video instead of lottie – see readme */
 .video-scene {
    display: none;                                        
 }
