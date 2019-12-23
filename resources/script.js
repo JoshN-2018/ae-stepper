@@ -206,34 +206,38 @@ function toggleHitAreas() {
 var screenRatioX = document.getElementById('ratio-x');
 var screenRatioY = document.getElementById('ratio-y');
 
+// style variable which contains root level variables
+var style = getComputedStyle(document.body);
+
 
 function panelContentUpdater() {
 
    // current scene readout
    currentSceneReadout.value = sceneNext - 1;
 
-   // button position values
-   readoutLeftOne.value = 'Left ' + '0' + '%'
-   readoutLeftTwo.value = 'Left ' + '0' + '%'
-   readoutLeftThree.value = 'Left ' + '0' + '%'
-   readoutLeftFour.value = 'Left ' + '0' + '%'
-   readoutLeftFive.value = 'Left ' + '0' + '%'
-   readoutLeftSix.value = 'Left ' + '0' + '%'
-   readoutLeftSeven.value = 'Left ' + '0' + '%'
-   readoutLeftEight.value = 'Left ' + '0' + '%'
-   readoutLeftNine.value = 'Left ' + '0' + '%'
-   readoutLeftTen.value = 'Left ' + '0' + '%'
 
-   readoutBottomOne.value = 'Bottom ' + '0' + '%'
-   readoutBottomTwo.value = 'Bottom ' + '0' + '%'
-   readoutBottomThree.value = 'Bottom ' + '0' + '%'
-   readoutBottomFour.value = 'Bottom ' + '0' + '%'
-   readoutBottomFive.value = 'Bottom ' + '0' + '%'
-   readoutBottomSix.value = 'Bottom ' + '0' + '%'
-   readoutBottomSeven.value = 'Bottom ' + '0' + '%'
-   readoutBottomEight.value = 'Bottom ' + '0' + '%'
-   readoutBottomNine.value = 'Bottom ' + '0' + '%'
-   readoutBottomTen.value = 'Bottom ' + '0' + '%'
+   // button position values
+   readoutLeftOne.value = 'Left ' + style.getPropertyValue('--b1-pos-left'); /* references the + style variable */
+   readoutLeftTwo.value = 'Left ' + style.getPropertyValue('--b2-pos-left');
+   readoutLeftThree.value = 'Left ' + style.getPropertyValue('--b3-pos-left');
+   readoutLeftFour.value = 'Left ' + style.getPropertyValue('--b4-pos-left');
+   readoutLeftFive.value = 'Left ' + style.getPropertyValue('--b5-pos-left');
+   readoutLeftSix.value = 'Left ' + style.getPropertyValue('--b6-pos-left');
+   readoutLeftSeven.value = 'Left ' + style.getPropertyValue('--b7-pos-left');
+   readoutLeftEight.value = 'Left ' + style.getPropertyValue('--b8-pos-left');
+   readoutLeftNine.value = 'Left ' + style.getPropertyValue('--b9-pos-left');
+   readoutLeftTen.value = 'Left ' + style.getPropertyValue('--b10-pos-left');
+
+   readoutBottomOne.value = 'Bottom ' + style.getPropertyValue('--b1-pos-bottom');
+   readoutBottomTwo.value = 'Bottom ' + style.getPropertyValue('--b2-pos-bottom');
+   readoutBottomThree.value = 'Bottom ' + style.getPropertyValue('--b3-pos-bottom');
+   readoutBottomFour.value = 'Bottom ' + style.getPropertyValue('--b4-pos-bottom');
+   readoutBottomFive.value = 'Bottom ' + style.getPropertyValue('--b5-pos-bottom');
+   readoutBottomSix.value = 'Bottom ' + style.getPropertyValue('--b6-pos-bottom');
+   readoutBottomSeven.value = 'Bottom ' + style.getPropertyValue('--b7-pos-bottom');
+   readoutBottomEight.value = 'Bottom ' + style.getPropertyValue('--b8-pos-bottom');
+   readoutBottomNine.value = 'Bottom ' + style.getPropertyValue('--b9-pos-bottom');
+   readoutBottomTen.value = 'Bottom ' + style.getPropertyValue('--b10-pos-bottom');
 
    // screen ratio
    // heightRatio = screenRatioY.value
