@@ -246,6 +246,10 @@ function panelContentUpdater() {
    readoutBottomTen.value = 'Bottom ' + style.getPropertyValue('--b10-pos-bottom');
 
    // update screen ration values from dropdown
+   valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
+   valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+
+   // assign values
    widthRatio = valueRatioX
    heightRatio = valueRatioY
    dimensionValuesGetter();
