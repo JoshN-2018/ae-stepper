@@ -218,13 +218,11 @@ select {
 }
 
 .video-scene {
-   /* display: none; */
-   /* border: 5px solid red;
-   background-color: red; */
+   display: none;
 }
 
 .data-scene {
-   display: none;
+   /* display: none; */
 }
 
 

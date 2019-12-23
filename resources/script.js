@@ -42,6 +42,11 @@ var sceneFiveAnim = lottie.loadAnimation({
    path: 'proto-scenes/scene-5/data.json'
 })
 
+// function turnOffDataScenes() {
+//    sceneOneAnim.style.opacity = 0;
+// }
+//
+// turnOffDataScenes();
 
 //collect scenes
 var sceneOne = document.getElementById('scene-1')
@@ -49,6 +54,9 @@ var sceneTwo = document.getElementById('scene-2')
 var sceneThree = document.getElementById('scene-3')
 var sceneFour = document.getElementById('scene-4')
 var sceneFive = document.getElementById('scene-5')
+
+// collect first video
+var videoStart = document.getElementById('video-start')
 
 //collect inter layers
 var interOne = document.getElementById('inter-1')
@@ -365,6 +373,7 @@ window.addEventListener("keydown", event => {
     console.log("space pressed")
     console.log("playing-scene-1");
     sceneOneAnim.play();
+    videoStart.play();
     panelContentUpdater();
   }
 });
