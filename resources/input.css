@@ -25,7 +25,27 @@
  --b4-pos-left: 50%;
  --b4-pos-bottom: 20%;
 
- /* button-4-position */
+ /* button-5-position */
  --b5-pos-left: 50%;
  --b5-pos-bottom: 10%;
+
+ /* button-6-position */
+ --b6-pos-left: 50%;
+ --b6-pos-bottom: 50%;
+
+ /* button-7-position */
+ --b7-pos-left: 50%;
+ --b7-pos-bottom: 40%;
+
+ /* button-8-position */
+ --b8-pos-left: 50%;
+ --b8-pos-bottom: 30%;
+
+ /* button-9-position */
+ --b9-pos-left: 50%;
+ --b9-pos-bottom: 20%;
+
+ /* button-10-position */
+ --b10-pos-left: 50%;
+ --b10-pos-bottom: 10%;
 }
