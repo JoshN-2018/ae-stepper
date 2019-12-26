@@ -209,7 +209,7 @@ html {
 }
 
 .instructions {
-   margin-bottom: 38px;
+   margin-bottom: 28px;
 }
 
 .dropdown .container-flex {
@@ -220,6 +220,9 @@ html {
    display: init;
 }
 
+.readout-wrapper {
+   margin-bottom: 0.5rem;
+}
 
 
 /* type styling */
@@ -251,6 +254,30 @@ h1, #current-scene {
    cursor: pointer;
 }
 
+output {
+   font-size: 14px;
+   margin-bottom: 12px;
+   width: 6rem;
+}
+
+output:nth-child(1n + 0) {
+   width: 1.5rem;
+   /* color: blue; */
+}
+
+output:nth-child(2n + 0) {
+   width: 4rem;
+   /* color: green; */
+}
+
+output:nth-child(3n + 0) {
+   width: 5rem;
+   /* color: red; */
+}
+
+hr {
+   margin-bottom: 1rem;
+}
 
 select {
    height: 34px;

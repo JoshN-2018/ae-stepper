@@ -258,11 +258,11 @@ function toggleHitAreas() {
 }
 
 // getting dropdown and users selection
-var screenRatioX = document.getElementById('ratio-x');
-var valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
-
-var screenRatioY = document.getElementById('ratio-y');
-var valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+// var screenRatioX = document.getElementById('ratio-x');
+// var valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
+//
+// var screenRatioY = document.getElementById('ratio-y');
+// var valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
 
 
 // style variable which contains root level variables
@@ -298,12 +298,12 @@ function panelContentUpdater() {
    readoutBottomTen.value = 'Bottom ' + style.getPropertyValue('--b10-pos-bottom');
 
    // update screen ratio to user selected values from dropdown
-   valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
-   valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+   // valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
+   // valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
 
    // assign values
-   widthRatio = valueRatioX
-   heightRatio = valueRatioY
+   // widthRatio = valueRatioX
+   // heightRatio = valueRatioY
    dimensionValuesGetter();
    interWidthSetter();
 

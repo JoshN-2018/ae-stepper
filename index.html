@@ -28,10 +28,12 @@
                   <h1>'ENTER' for full-screen</h1>
                </div>
 
-               <div class="dropdown">
+   <!-- Dropdown -->
+
+               <!-- <div class="dropdown">
                   <p class="label">screen ratio</p>
                   <div class="container-flex">
-                     <select id="ratio-x" onchange="panelContentUpdater()">  <!--Call function-->
+                     <select id="ratio-x" onchange="panelContentUpdater()">
                         <option value="9">9</option>
                         <option value="9">10</option>
                         <option value="16">16</option>
@@ -40,7 +42,7 @@
 
                      </select>
                      <h1>:</h1>
-                     <select id="ratio-y" onchange="panelContentUpdater()"> <!--Call function-->
+                     <select id="ratio-y" onchange="panelContentUpdater()">
                         <option value="16">16</option>
                         <option value="18">18</option>
                         <option value="18">19.5</option>
@@ -48,7 +50,8 @@
                         <option value="9">10</option>
                      </select>
                   </div>
-               </div>
+               </div> -->
+
 
                <div class="field" id="hinting">
                   <p class="label">button hinting</p>
@@ -56,11 +59,6 @@
                   <img id="tick-off-A"src="resources/images/tick-box-off.svg" alt="tick-box-off">
                </div>
 
-               <div class="field" id="hit-areas">
-                  <p class="label">Show hit areas</p>
-                  <img class="off" id="tick-on-B" src="resources/images/tick-box-on.svg" alt="tick-box-on">
-                  <img id="tick-off-B"src="resources/images/tick-box-off.svg" alt="tick-box-off">
-               </div>
 
             </div>
             <!-- end of: controls -->
@@ -74,8 +72,47 @@
                <h1 id="reset" class="reset">Reset</h1>
             </div>
 
+            <h1>Readouts</h1>
 
-          <!-- read out toggle -->
+
+            <div class="field" id="hit-areas">
+               <p class="label">Show hit areas</p>
+               <img class="off" id="tick-on-B" src="resources/images/tick-box-on.svg" alt="tick-box-on">
+               <img id="tick-off-B"src="resources/images/tick-box-off.svg" alt="tick-box-off">
+            </div>
+
+
+          <!-- Read outs -->
+            <hr>
+            <div class="readout-toggle">
+                <p class="label">Screen Ratio</p>
+            </div>
+
+            <div class="readout-wrapper">
+               <div class="readout">
+                 <output>Ratio</output>
+                 <output id="ratio-X">X: 9</output>
+                 <output id="ratio-Y">Y: 16</output>
+               </div>
+            </div>
+
+            <hr>
+
+            <div class="readout-toggle">
+                <p class="label">Button Dimensions</p>
+            </div>
+
+            <div class="readout-wrapper">
+               <div class="readout">
+                 <output>All</output>
+                 <output id="button-width">Width 0</output>
+                 <output id="button-height">Height 0</output>
+               </div>
+            </div>
+
+            <hr>
+
+
             <div class="readout-toggle">
                <p class="label">Button positions</p>
             </div>
@@ -85,54 +122,54 @@
             <div class="readout-wrapper">
 
                <div class="readout">
-                 <output class="label">#1</output>
-                 <output id="Left-1" class="label">Left: 50%</output>
-                 <output id="Bottom-1" class="label">Bottom: 50%</output>
+                 <output>#1</output>
+                 <output id="Left-1">Left: 50%</output>
+                 <output id="Bottom-1">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#2</output>
-                 <output id="Left-2" class="label">Left: 50%</output>
-                 <output id="Bottom-2" class="label">Bottom: 50%</output>
+                 <output>#2</output>
+                 <output id="Left-2">Left: 50%</output>
+                 <output id="Bottom-2">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#3</output>
-                 <output id="Left-3" class="label">Left: 50%</output>
-                 <output id="Bottom-3" class="label">Bottom: 50%</output>
+                 <output>#3</output>
+                 <output id="Left-3">Left: 50%</output>
+                 <output id="Bottom-3">Bottom: 50%</output>
                </div>
               <div class="readout">
-                 <output class="label">#4</output>
-                 <output id="Left-4" class="label">Left: 50%</output>
-                 <output id="Bottom-4" class="label">Bottom: 50%</output>
+                 <output>#4</output>
+                 <output id="Left-4">Left: 50%</output>
+                 <output id="Bottom-4">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#5</output>
-                 <output id="Left-5" class="label">Left: 50%</output>
-                 <output id="Bottom-5" class="label">Bottom: 50%</output>
+                 <output>#5</output>
+                 <output id="Left-5">Left: 50%</output>
+                 <output id="Bottom-5">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#6</output>
-                 <output id="Left-6" class="label">Left: 50%</output>
-                 <output id="Bottom-6" class="label">Bottom: 50%</output>
+                 <output>#6</output>
+                 <output id="Left-6">Left: 50%</output>
+                 <output id="Bottom-6">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#7</output>
-                 <output id="Left-7" class="label">Left: 50%</output>
-                 <output id="Bottom-7" class="label">Bottom: 50%</output>
+                 <output>#7</output>
+                 <output id="Left-7">Left: 50%</output>
+                 <output id="Bottom-7">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#8</output>
-                 <output id="Left-8" class="label">Left: 50%</output>
-                 <output id="Bottom-8" class="label">Bottom: 50%</output>
+                 <output>#8</output>
+                 <output id="Left-8">Left: 50%</output>
+                 <output id="Bottom-8">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#9</output>
-                 <output id="Left-9" class="label">Left: 50%</output>
-                 <output id="Bottom-9" class="label">Bottom: 50%</output>
+                 <output>#9</output>
+                 <output id="Left-9">Left: 50%</output>
+                 <output id="Bottom-9">Bottom: 50%</output>
                </div>
                <div class="readout">
-                 <output class="label">#10</output>
-                 <output id="Left-10" class="label">Left: 50%</output>
-                 <output id="Bottom-10" class="label">Bottom: 50%</output>
+                 <output>#10</output>
+                 <output id="Left-10">Left: 50%</output>
+                 <output id="Bottom-10">Bottom: 50%</output>
                </div>
             </div>
 
