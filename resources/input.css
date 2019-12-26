@@ -2,7 +2,13 @@
 /* ////////////////// enter your button sizes and postions here in %! ////////////////// */
 
 :root {
-  /* button size values (all buttons) */
+
+/* screen ratios */
+ --screen-ratio-X: 9;
+ --screen-ratio-Y: 16;
+
+
+/* button size values (all buttons) */
  --button-height: 8%;
  --button-width: 50%;
 

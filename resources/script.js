@@ -235,16 +235,16 @@ addPanelListeners();
 
 ////////////////////   Panel modifiers   ////////////////////
 
+// button hinting tick box
 function toggleButtonHinting() {
 
    tickBoxOnA.classList.toggle("off");
    tickBoxOffA.classList.toggle("off");
-
    /* function to go here */
-
    console.log("tickbox A clicked");
 }
 
+// Hit area tick box
 function toggleHitAreas() {
 
    tickBoxOnB.classList.toggle("off");
@@ -253,17 +253,27 @@ function toggleHitAreas() {
    for (var i = 0; i < interLayers.length; i++) {
       interLayers[i].classList.toggle("hit-area-show");
    }
-
    console.log("tickbox B clicked");
 }
 
-// getting dropdown and users selection
-// var screenRatioX = document.getElementById('ratio-x');
-// var valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
-//
-// var screenRatioY = document.getElementById('ratio-y');
-// var valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+// Collect screen ratios
+var screenRatioX = document.getElementById('ratio-x');
+var screenRatioY = document.getElementById('ratio-y');
 
+
+function screenRatioCollector() {
+
+}
+
+// Dropdown code!
+/*
+getting dropdown and users selection
+var screenRatioX = document.getElementById('ratio-drop-x');
+var valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
+
+var screenRatioY = document.getElementById('ratio-drop-y');
+var valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+*/
 
 // style variable which contains root level variables
 var style = getComputedStyle(document.body);
@@ -273,6 +283,10 @@ function panelContentUpdater() {
 
    // current scene readout
    currentSceneReadout.value = sceneNext - 1;
+
+   // screen ratio
+   screenRatioX.value = 'X: ' + style.getPropertyValue('--screen-ratio-X');
+   screenRatioY.value = 'Y: ' + style.getPropertyValue('--screen-ratio-Y');
 
    // button position values
    readoutLeftOne.value = 'Left ' + style.getPropertyValue('--b1-pos-left'); /* references the + style variable */
@@ -297,13 +311,22 @@ function panelContentUpdater() {
    readoutBottomNine.value = 'Bottom ' + style.getPropertyValue('--b9-pos-bottom');
    readoutBottomTen.value = 'Bottom ' + style.getPropertyValue('--b10-pos-bottom');
 
-   // update screen ratio to user selected values from dropdown
-   // valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
-   // valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+   // Dropdown code!
+   /*
+   update screen ratio to user selected values from dropdown
+   valueRatioX = screenRatioX.options[screenRatioX.selectedIndex].value;
+   valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
+
+   assign values
+   widthRatio = valueRatioX
+   heightRatio = valueRatioY
+   */
 
    // assign values
-   // widthRatio = valueRatioX
-   // heightRatio = valueRatioY
+   widthRatio = style.getPropertyValue('--screen-ratio-X');
+   heightRatio = style.getPropertyValue('--screen-ratio-Y');
+
+
    dimensionValuesGetter();
    interWidthSetter();
 
