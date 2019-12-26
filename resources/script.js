@@ -507,15 +507,6 @@ window.addEventListener("keydown", event => {
   }
 });
 
-// exit fire (doesn't work)
-window.addEventListener("keydown", event => {
-  if (event.keyCode == 27) {
-    console.log("exit pressed")
-    setTimeout(function(){dimensionValuesGetter(); }, 250);
-    setTimeout(function(){interWidthSetter(); }, 300);
-  }
-});
-
 //space fire
 window.addEventListener("keydown", event => {
   if (event.keyCode == 32) {
@@ -544,6 +535,24 @@ function buttonActions() {
   interChanger();
   scenePlayer();
   panelContentUpdater();
+}
+
+// detect fullscreen exit
+if (document.addEventListener)
+{
+ document.addEventListener('fullscreenchange', exitHandler, false);
+ document.addEventListener('mozfullscreenchange', exitHandler, false);
+ document.addEventListener('MSFullscreenChange', exitHandler, false);
+ document.addEventListener('webkitfullscreenchange', exitHandler, false);
+}
+
+function exitHandler()
+{
+ if (document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement !== null)
+ {
+    setTimeout(function(){dimensionValuesGetter(); }, 250);
+    setTimeout(function(){interWidthSetter(); }, 300);
+ }
 }
 
 
