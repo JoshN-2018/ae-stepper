@@ -8,7 +8,7 @@ If you need to work with video instead of lottie.
 
 Steps
 - remove the lottie data from the photo scenes folders (otherwise both will render)
-- in CSS line:220 comment out:
+- in CSS line:297 comment out:
 
 .video-scene {
    display: none;                                        

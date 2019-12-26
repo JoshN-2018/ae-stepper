@@ -140,6 +140,12 @@ var resetButton = document.getElementById('reset');
 
 var currentSceneReadout = document.getElementById('current-scene');
 
+var screenRatioX = document.getElementById('ratio-x');
+var screenRatioY = document.getElementById('ratio-y');
+
+var readoutButtonWidth = document.getElementById('button-width');
+var readoutButtonHeight = document.getElementById('button-height');
+
 var readoutLeftOne = document.getElementById('Left-1');
 var readoutLeftTwo = document.getElementById('Left-2');
 var readoutLeftThree = document.getElementById('Left-3');
@@ -256,14 +262,9 @@ function toggleHitAreas() {
    console.log("tickbox B clicked");
 }
 
-// Collect screen ratios
-var screenRatioX = document.getElementById('ratio-x');
-var screenRatioY = document.getElementById('ratio-y');
 
 
-function screenRatioCollector() {
 
-}
 
 // Dropdown code!
 /*
@@ -287,6 +288,10 @@ function panelContentUpdater() {
    // screen ratio
    screenRatioX.value = 'X: ' + style.getPropertyValue('--screen-ratio-X');
    screenRatioY.value = 'Y: ' + style.getPropertyValue('--screen-ratio-Y');
+
+   // button size values
+   readoutButtonWidth.value = 'Width: ' + style.getPropertyValue('--button-width');
+   readoutButtonHeight.value = 'Height: ' + style.getPropertyValue('--button-height');
 
    // button position values
    readoutLeftOne.value = 'Left ' + style.getPropertyValue('--b1-pos-left'); /* references the + style variable */
