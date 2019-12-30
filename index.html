@@ -2,24 +2,254 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="style.css">
-      <title>proto-proof</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="resources/reset.css">
+      <link rel="stylesheet" href="resources/style.css">
+      <title>Proto-AE</title>
    </head>
    <body>
 
-      <div class="container">
-         <p>Push 'ENTER' for full-screen, 'SPACE' to start and 'RIGHT' for next scene</p>
-         <div id="proto-box">
-           <div class="scene" id="scene-1"></div>
-           <div class="scene" id="scene-2"></div>
-           <div class="scene" id="scene-3"></div>
-           <div class="scene" id="scene-4"></div>
-           <div class="scene" id="scene-5"></div>
+
+      <!-- Panel -->
+      <div id="panel">
+          <!-- title box -->
+            <div class="title-box">
+               <span class="logo">Proto–AE</span>
+            </div>
+
+         <!-- panel-content -->
+         <div class="panel-content">
+
+            <div class="controls">
+
+               <div class="instructions">
+                  <h1>'SPACE' to start</h1>
+                  <h1>'RIGHT' for next scene</h1>
+                  <h1>'ENTER' for full-screen</h1>
+               </div>
+
+   <!-- Dropdown -->
+
+               <!-- <div class="dropdown">
+                  <p class="label">screen ratio</p>
+                  <div class="container-flex">
+                     <select id="ratio-drop-x" onchange="panelContentUpdater()">
+                        <option value="9">9</option>
+                        <option value="9">10</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="18">19.5</option>
+
+                     </select>
+                     <h1>:</h1>
+                     <select id="ratio-drop-y" onchange="panelContentUpdater()">
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="18">19.5</option>
+                        <option value="9">9</option>
+                        <option value="9">10</option>
+                     </select>
+                  </div>
+               </div> -->
+
+
+               <div class="field" id="hinting">
+                  <p class="label">button hinting</p>
+                  <img class="off" id="tick-on-A" src="resources/images/tick-box-on.svg" alt="tick-box-on">
+                  <img id="tick-off-A"src="resources/images/tick-box-off.svg" alt="tick-box-off">
+               </div>
+
+
+            </div>
+            <!-- end of: controls -->
+
+            <!-- Indicator + reset -->
+            <div class="indicator-reset">
+               <div class="current-scene container-flex">
+                  <h1>Current Scene:</h1>
+                  <output id="current-scene">0</output>
+               </div>
+               <h1 id="reset" class="reset">Reset</h1>
+            </div>
+
+            <h1>Readouts</h1>
+
+
+            <div class="field" id="hit-areas">
+               <p class="label">Show hit areas</p>
+               <img class="off" id="tick-on-B" src="resources/images/tick-box-on.svg" alt="tick-box-on">
+               <img id="tick-off-B"src="resources/images/tick-box-off.svg" alt="tick-box-off">
+            </div>
+
+
+          <!-- Read outs -->
+            <hr>
+            <div class="readout-toggle">
+                <p class="label">Screen Ratio</p>
+            </div>
+
+            <div class="readout-wrapper">
+               <div class="readout">
+                 <output>Ratio</output>
+                 <output id="ratio-x">X: 9</output>
+                 <output id="ratio-y">Y: 16</output>
+               </div>
+            </div>
+
+            <hr>
+            <div class="readout-toggle">
+                <p class="label">Button Dimensions</p>
+            </div>
+
+            <div class="readout-wrapper">
+               <div class="readout">
+                 <output>All</output>
+                 <output id="button-width">Width 0</output>
+                 <output id="button-height">Height 0</output>
+               </div>
+            </div>
+            <hr>
+
+
+            <div class="readout-toggle">
+               <p class="label">Button positions</p>
+            </div>
+
+
+            <div class="readout-wrapper">
+
+               <div class="readout">
+                 <output>#1</output>
+                 <output id="Left-1">Left: 50%</output>
+                 <output id="Bottom-1">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#2</output>
+                 <output id="Left-2">Left: 50%</output>
+                 <output id="Bottom-2">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#3</output>
+                 <output id="Left-3">Left: 50%</output>
+                 <output id="Bottom-3">Bottom: 50%</output>
+               </div>
+              <div class="readout">
+                 <output>#4</output>
+                 <output id="Left-4">Left: 50%</output>
+                 <output id="Bottom-4">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#5</output>
+                 <output id="Left-5">Left: 50%</output>
+                 <output id="Bottom-5">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#6</output>
+                 <output id="Left-6">Left: 50%</output>
+                 <output id="Bottom-6">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#7</output>
+                 <output id="Left-7">Left: 50%</output>
+                 <output id="Bottom-7">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#8</output>
+                 <output id="Left-8">Left: 50%</output>
+                 <output id="Bottom-8">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#9</output>
+                 <output id="Left-9">Left: 50%</output>
+                 <output id="Bottom-9">Bottom: 50%</output>
+               </div>
+               <div class="readout">
+                 <output>#10</output>
+                 <output id="Left-10">Left: 50%</output>
+                 <output id="Bottom-10">Bottom: 50%</output>
+               </div>
+            </div>
+
          </div>
-         <!-- <button id="goFS">Go Fullscreen</button> -->
+         <!-- end of: panel content -->
+
+      </div>
+      <!-- end of: Panel -->
+
+
+
+      <div class="container">
+
+         <div id="proto-box">
+           <!-- interlayers -->
+           <div id="inter-1" class="interLayer"><div class="button"></div></div>
+           <div id="inter-2" class="interLayer"><div class="button"></div></div>
+           <div id="inter-3" class="interLayer"><div class="button"></div></div>
+           <div id="inter-4" class="interLayer"><div class="button"></div></div>
+           <div id="inter-5" class="interLayer"><div class="button"></div></div>
+           <div id="inter-6" class="interLayer"><div class="button"></div></div>
+           <div id="inter-7" class="interLayer"><div class="button"></div></div>
+           <div id="inter-8" class="interLayer"><div class="button"></div></div>
+           <div id="inter-9" class="interLayer"><div class="button"></div></div>
+           <div id="inter-10" class="interLayer"><div class="button"></div></div>
+
+
+           <!-- scenes -->
+           <div id="scene-1" class="scene">
+             <video id="video-start"class="video-fill video-scene">
+                <source src="video/scene-1/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-2" class="scene">
+             <video autoplay class="video-fill video-scene">
+                <source src="video/scene-2/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-3" class="scene">
+             <video autoplay class="video-fill video-scene">
+                <source src="video/scene-3/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-4" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-4/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-5" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-5/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-6" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-6/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-7" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-7/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-8" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-8/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-9" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-9/video.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div id="scene-10" class="scene">
+             <video autoplay class="video-fill video-scene">
+                 <source src="video/scene-10/video.mp4" type="video/mp4">
+             </video>
+           </div>
+
+         </div>
       </div>
 
-      <script src="lottie.js"></script>
-      <script src="script.js"></script>
+      <script src="resources/lottie.js"></script>
+      <script src="resources/script.js"></script>
    </body>
 </html>

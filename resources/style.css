@@ -1,0 +1,321 @@
+@import 'input.css';
+
+
+/* Set up */
+
+.container {
+   margin: 0 auto;
+}
+
+#proto-box {
+   margin: auto 0;
+}
+
+.scene {
+  height: 100vh;
+}
+
+html {
+   background-color: #F7F7F7;
+}
+
+
+.interLayer {
+  border: 4px solid red;
+  height: 100%;
+  /* width: 507px; /*change to javascript provided value*/
+  position: fixed;
+  z-index: 2;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  opacity: 0;
+}
+
+.button {
+  position: absolute;
+  width: var(--button-width);
+  height: var(--button-height);
+}
+
+#inter-1 .button {
+  background-color: red;
+  /* left: calc(var(--b1-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+  left: calc(var(--b1-pos-left));
+  bottom: calc(var(--b1-pos-bottom));
+}
+
+#inter-2 .button {
+  background-color: green;
+  /* left: calc(var(--b2-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+  left: calc(var(--b2-pos-left));
+  bottom: calc(var(--b2-pos-bottom));
+}
+
+#inter-3 .button {
+  background-color: blue;
+  /* left: calc(var(--b3-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+  left: calc(var(--b3-pos-left));
+  bottom: calc(var(--b3-pos-bottom));
+}
+
+#inter-4 .button {
+  background-color: yellow;
+  /* left: calc(var(--b4-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+  left: calc(var(--b4-pos-left));
+  bottom: calc(var(--b4-pos-bottom));
+}
+
+#inter-5 .button {
+   background-color: pink;
+   /* left: calc(var(--b5-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+   left: calc(var(--b5-pos-left));
+   bottom: calc(var(--b5-pos-bottom));
+}
+
+#inter-6 .button {
+   background-color: brown;
+   /* left: calc(var(--b6-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+   left: calc(var(--b6-pos-left));
+   bottom: calc(var(--b6-pos-bottom));
+}
+
+#inter-7 .button {
+   background-color: purple;
+   /* left: calc(var(--b7-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+   left: calc(var(--b7-pos-left));
+   bottom: calc(var(--b7-pos-bottom));
+}
+
+#inter-8 .button {
+   background-color: magenta;
+   /* left: calc(var(--b8-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+   left: calc(var(--b8-pos-left));
+   bottom: calc(var(--b8-pos-bottom));
+}
+
+#inter-9 .button {
+   background-color: cyan;
+   /* left: calc(var(--b9-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+   left: calc(var(--b9-pos-left));
+   bottom: calc(var(--b9-pos-bottom));
+}
+
+#inter-10 .button {
+   background-color: maroon;
+   /* left: calc(var(--b10-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
+   left: calc(var(--b10-pos-left));
+   bottom: calc(var(--b10-pos-bottom));
+}
+
+
+/* interLayer border colours */
+#inter-1 {
+  border: 4px solid red;
+}
+#inter-2 {
+  border: 4px solid green;
+}
+#inter-3 {
+  border: 4px solid blue;
+}
+#inter-4 {
+  border: 4px solid yellow;
+}
+#inter-5 {
+  border: 4px solid pink;
+}
+#inter-6 {
+  border: 4px solid brown;
+}
+#inter-7 {
+  border: 4px solid purple;
+}
+#inter-8 {
+  border: 4px solid magenta;
+}
+#inter-9 {
+  border: 4px solid cyan;
+}
+#inter-10 {
+  border: 4px solid maroon;
+}
+
+/* js classes */
+.off {
+  display: none !important;
+}
+
+.hit-area-show {
+   opacity: 1 !important;
+}
+
+
+
+/* //////////////////  Panel //////////////////// */
+
+#panel {
+   width: 300px;
+   height: 100%;
+   position: fixed;
+   left: 0;
+   top: 0;
+   background-color: #FFF;
+   opacity: 0.95;
+   font-family: "Mabry", sans-serif;
+   z-index: 10;
+}
+
+/* set up */
+.field, .current-scene, .readout-toggle, .readout {
+   display: flex;
+}
+
+.container-flex {
+   display: flex;
+}
+
+.title-box {
+   padding: 38px 32px;
+   border-bottom: 1px solid #000;
+}
+
+.panel-content {
+   padding: 38px 32px;
+}
+
+.video-fill {
+   width: 100% !important;
+}
+
+
+/* elements */
+
+
+.field {
+   margin-bottom: 1rem;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.dropdown {
+   margin-bottom: 1rem;
+}
+
+.indicator-reset {
+   padding: 22px 0 32px 0;
+}
+
+.instructions {
+   margin-bottom: 28px;
+}
+
+.dropdown .container-flex {
+   justify-content: space-between;
+}
+
+.tick-on {
+   display: init;
+}
+
+.readout-wrapper {
+   margin-bottom: 0.5rem;
+}
+
+
+/* type styling */
+.label {
+   text-transform: uppercase;
+   font-size: 12px;
+   margin-bottom: 12px;
+}
+
+.field .label {
+   margin-bottom: 0;
+}
+
+h1, #current-scene {
+   font-size: 21px;
+   margin-bottom: 0.75rem;
+}
+
+.logo {
+   font-size: 38px;
+}
+
+.readout, .current-scene {
+   justify-content: space-between;
+}
+
+.reset {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+output {
+   font-size: 14px;
+   margin-bottom: 12px;
+   width: 6rem;
+}
+
+output:nth-child(1n + 0) {
+   width: 2.2rem;
+   /* color: blue; */
+}
+
+output:nth-child(2n + 0) {
+   width: 5rem;
+   /* color: green; */
+}
+
+output:nth-child(3n + 0) {
+   width: 5rem;
+   /* color: red; */
+}
+
+hr {
+   margin-bottom: 1rem;
+}
+
+select {
+   height: 34px;
+   border-radius: 0px;
+   background-color: #FFF;
+   width: 96px;
+   border: 1px solid black;
+   font-size: 18px;
+}
+
+
+/* function for hinting needs to be written but the button is there */
+#hinting {
+   display: none;
+}
+
+/* comment this out to use video instead of lottie – see readme */
+.video-scene {
+   display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
