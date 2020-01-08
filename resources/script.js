@@ -136,7 +136,8 @@ var tickBoxOffA = document.getElementById('tick-off-A');
 var tickBoxOnB = document.getElementById('tick-on-B');
 var tickBoxOffB = document.getElementById('tick-off-B');
 
-var resetButton = document.getElementById('reset');
+var resetButton = document.getElementById('reset-button');
+var fullScreenButton = document.getElementById('fullscreen-button');
 
 var currentSceneReadout = document.getElementById('current-scene');
 
@@ -232,6 +233,7 @@ function addPanelListeners() {
      tickBoxOffB.addEventListener("click", toggleHitAreas);
 
      resetButton.addEventListener("click", reset);
+     fullScreenButton.addEventListener("click", goFS);
 
      console.log('panel event listeners added')
 }

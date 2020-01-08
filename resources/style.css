@@ -151,7 +151,7 @@ html {
    opacity: 1 !important;
 }
 .panel-close {
-   transform: translateX(-305px);
+   transform: translateX(-310px);
 }
 
 
@@ -159,7 +159,7 @@ html {
 /* //////////////////  Panel //////////////////// */
 
 #panel {
-   width: 305px;
+   width: 310px;
    height: 100%;
    position: fixed;
    left: 0;
@@ -253,9 +253,13 @@ h1, #current-scene {
    justify-content: space-between;
 }
 
-.reset {
+.clickable {
    text-decoration: underline;
    cursor: pointer;
+}
+
+#fullscreen-button {
+   display: none;
 }
 
 output {
@@ -292,6 +296,25 @@ select {
    font-size: 18px;
 }
 
+/* mobile view */
+@media (max-width: 720px) {
+   #fullscreen-button {
+      display: initial;
+   }
+   .instructions, .readout-wrapper, .readout-toggle, .title-box, hr, .mobile-off {
+      display: none;
+   }
+   #panel {
+      width: 250px;
+      height: initial;
+   }
+   .panel-content {
+      padding: 2rem;
+   }
+   #current-scene {
+      width: 1rem;
+   }
+}
 
 /* function for hinting needs to be written but the button is there */
 #hinting {
