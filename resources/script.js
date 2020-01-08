@@ -494,6 +494,11 @@ function reset() {
    console.log("refresh requested")
 }
 
+function menuToggle() {
+   var panel = document.getElementById("panel");
+   panel.classList.toggle("panel-close");
+}
+
 
 ////////////////////    Press events   ////////////////////
 
@@ -515,6 +520,15 @@ window.addEventListener("keydown", event => {
     sceneOneAnim.play();
     videoStart.play();
     panelContentUpdater();
+  }
+});
+
+//'C' fire
+window.addEventListener("keydown", event => {
+  if (event.keyCode == 67) {
+    console.log("'c' pressed")
+    console.log("clear-menu");
+    menuToggle();
   }
 });
 

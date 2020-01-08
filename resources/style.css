@@ -150,13 +150,16 @@ html {
 .hit-area-show {
    opacity: 1 !important;
 }
+.panel-close {
+   transform: translateX(-305px);
+}
 
 
 
 /* //////////////////  Panel //////////////////// */
 
 #panel {
-   width: 300px;
+   width: 305px;
    height: 100%;
    position: fixed;
    left: 0;
@@ -165,6 +168,7 @@ html {
    opacity: 0.95;
    font-family: "Mabry", sans-serif;
    z-index: 10;
+   transition: all 0.4s ease;
 }
 
 /* set up */
