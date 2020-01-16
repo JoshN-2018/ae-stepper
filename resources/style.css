@@ -323,7 +323,7 @@ select {
 
 /* comment this out to use video instead of lottie – see readme */
 .video-scene {
-   display: none;
+   /* display: none; */
 }
 
 

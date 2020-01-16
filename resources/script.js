@@ -95,9 +95,6 @@ var sceneEight = document.getElementById('scene-8')
 var sceneNine = document.getElementById('scene-9')
 var sceneTen = document.getElementById('scene-10')
 
-// collect first video
-var videoStart = document.getElementById('video-start')
-
 //collect inter layers
 var interOne = document.getElementById('inter-1')
 var interTwo = document.getElementById('inter-2')
@@ -113,6 +110,7 @@ var interTen = document.getElementById('inter-10')
 
 // displayed scenes array
 var displayedScenes = document.getElementsByClassName("scene");
+var displayedVidScenes = document.getElementsByClassName("video-scene");
 
 // displayed interlayers array
 var interLayers = document.getElementsByClassName("interLayer");
@@ -430,54 +428,64 @@ function interChanger() {
 function scenePlayer () {
   if (sceneNext === 2) {
     sceneTwoAnim.play();
+    displayedVidScenes[1].play();
     sceneNext = 3
     console.log("playing-scene-2");
+    console.log("playing-vid scene-2");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 3) {
     sceneThreeAnim.play();
+    displayedVidScenes[2].play();
     sceneNext = 4
     console.log("playing-scene-3");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 4) {
     sceneFourAnim.play();
+    displayedVidScenes[3].play();
     sceneNext = 5
     console.log("playing-scene-4");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 5) {
     sceneFiveAnim.play();
+    displayedVidScenes[4].play();
     sceneNext = 6
     console.log("playing-scene-5");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 6) {
     sceneSixAnim.play();
+    displayedVidScenes[5].play();
     sceneNext = 7
     console.log("playing-scene-6");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 7) {
     sceneSevenAnim.play();
+    displayedVidScenes[6].play();
     sceneNext = 8
     console.log("playing-scene-7");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 8) {
     sceneEightAnim.play();
+    displayedVidScenes[7].play();
     sceneNext = 9
     console.log("playing-scene-8");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 9) {
     sceneNineAnim.play();
+    displayedVidScenes[8].play();
     sceneNext = 10
     console.log("playing-scene-9");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 10) {
     sceneTenAnim.play();
+    displayedVidScenes[9].play();
     sceneNext = 11
     console.log("playing-scene-10");
     console.log('next scene is ' + sceneNext);
@@ -520,7 +528,7 @@ window.addEventListener("keydown", event => {
     console.log("space pressed")
     console.log("playing-scene-1");
     sceneOneAnim.play();
-    videoStart.play();
+    displayedVidScenes[0].play();
     panelContentUpdater();
   }
 });
