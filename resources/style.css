@@ -190,7 +190,13 @@ html {
 }
 
 .video-fill {
-   width: 100% !important;
+   height: 100% !important;
+}
+
+.scene {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
 }
 
 
