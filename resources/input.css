@@ -4,8 +4,8 @@
 :root {
 
 /* screen ratios */
- --screen-ratio-X: 9;
- --screen-ratio-Y: 19.5;
+ --screen-ratio-X: 1440;
+ --screen-ratio-Y: 1100;
 
 
 /* button size values (all buttons) */
