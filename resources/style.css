@@ -1,4 +1,4 @@
-@import 'input.css';
+@import '../input.css';
 
 
 /* Set up */
@@ -332,7 +332,9 @@ select {
    /* display: none; */
 }
 
-
+.video-off {
+   display: none;
+}
 
 
 
