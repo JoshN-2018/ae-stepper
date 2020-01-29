@@ -1,4 +1,4 @@
-@import 'input.css';
+@import '../input.css';
 
 
 /* Set up */
@@ -190,7 +190,13 @@ html {
 }
 
 .video-fill {
-   width: 100% !important;
+   height: 100% !important;
+}
+
+.scene {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
 }
 
 
@@ -323,10 +329,12 @@ select {
 
 /* comment this out to use video instead of lottie – see readme */
 .video-scene {
-   display: none;
+   /* display: none; */
 }
 
-
+.video-off {
+   display: none;
+}
 
 
 

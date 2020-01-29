@@ -7,7 +7,7 @@ var sceneOneAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-1/data.json'
+   path: 'lottie-scenes/scene-1/data.json'
 })
 
 var sceneTwoAnim = lottie.loadAnimation({
@@ -15,7 +15,7 @@ var sceneTwoAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-2/data.json'
+   path: 'lottie-scenes/scene-2/data.json'
 })
 
 var sceneThreeAnim = lottie.loadAnimation({
@@ -23,7 +23,7 @@ var sceneThreeAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-3/data.json'
+   path: 'lottie-scenes/scene-3/data.json'
 })
 
 var sceneFourAnim = lottie.loadAnimation({
@@ -31,7 +31,7 @@ var sceneFourAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-4/data.json'
+   path: 'lottie-scenes/scene-4/data.json'
 })
 
 var sceneFiveAnim = lottie.loadAnimation({
@@ -39,7 +39,7 @@ var sceneFiveAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-5/data.json'
+   path: 'lottie-scenes/scene-5/data.json'
 })
 
 var sceneSixAnim = lottie.loadAnimation({
@@ -47,7 +47,7 @@ var sceneSixAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-5/data.json'
+   path: 'lottie-scenes/scene-5/data.json'
 })
 
 var sceneSevenAnim = lottie.loadAnimation({
@@ -55,7 +55,7 @@ var sceneSevenAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-5/data.json'
+   path: 'lottie-scenes/scene-5/data.json'
 })
 
 var sceneEightAnim = lottie.loadAnimation({
@@ -63,7 +63,7 @@ var sceneEightAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-5/data.json'
+   path: 'lottie-scenes/scene-5/data.json'
 })
 
 var sceneNineAnim = lottie.loadAnimation({
@@ -71,7 +71,7 @@ var sceneNineAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-5/data.json'
+   path: 'lottie-scenes/scene-5/data.json'
 })
 
 var sceneTenAnim = lottie.loadAnimation({
@@ -79,7 +79,7 @@ var sceneTenAnim = lottie.loadAnimation({
    renderer: 'svg',
    loop: false,
    autoplay: false,
-   path: 'proto-scenes/scene-5/data.json'
+   path: 'lottie-scenes/scene-5/data.json'
 })
 
 
@@ -94,9 +94,6 @@ var sceneSeven = document.getElementById('scene-7')
 var sceneEight = document.getElementById('scene-8')
 var sceneNine = document.getElementById('scene-9')
 var sceneTen = document.getElementById('scene-10')
-
-// collect first video
-var videoStart = document.getElementById('video-start')
 
 //collect inter layers
 var interOne = document.getElementById('inter-1')
@@ -113,6 +110,7 @@ var interTen = document.getElementById('inter-10')
 
 // displayed scenes array
 var displayedScenes = document.getElementsByClassName("scene");
+var displayedVidScenes = document.getElementsByClassName("video-scene");
 
 // displayed interlayers array
 var interLayers = document.getElementsByClassName("interLayer");
@@ -127,8 +125,11 @@ var widthRatio = 9
 var interHeight = 0
 var interLayerWidth = 0
 
+// media values
+var mediaVideo = 1
+
 // Scene
-var sceneNext = 2
+var sceneNext = 1
 
 // Panel elements
 var tickBoxOnA = document.getElementById('tick-on-A');
@@ -240,6 +241,23 @@ function addPanelListeners() {
 addPanelListeners();
 
 
+// set media type based on user preference
+function mediaSetter() {
+   if (mediaVideo === " 0") {
+      for (var i = 0; i < displayedVidScenes.length; i++) {
+        displayedVidScenes[i].classList.add("video-off");
+        }
+      console.log('video off');
+   }
+   else if (mediaVideo === " 1") {
+      for (var i = 0; i < displayedVidScenes.length; i++) {
+        displayedVidScenes[i].classList.remove("video-off");
+        }
+      console.log('video on');
+   }
+}
+
+
 
 ////////////////////   Panel modifiers   ////////////////////
 
@@ -280,6 +298,8 @@ var valueRatioY = screenRatioY.options[screenRatioY.selectedIndex].value;
 
 // style variable which contains root level variables
 var style = getComputedStyle(document.body);
+
+
 
 
 function panelContentUpdater() {
@@ -333,9 +353,14 @@ function panelContentUpdater() {
    widthRatio = style.getPropertyValue('--screen-ratio-X');
    heightRatio = style.getPropertyValue('--screen-ratio-Y');
 
+   // media type
+   mediaVideo = style.getPropertyValue('--video');
+   mediaLottie = style.getPropertyValue('--lottie');
+
 
    dimensionValuesGetter();
    interWidthSetter();
+   mediaSetter();
 
    console.log('panel content updated')
 }
@@ -428,56 +453,74 @@ function interChanger() {
 
 //scenePlayer
 function scenePlayer () {
-  if (sceneNext === 2) {
+   if (sceneNext === 1) {
+     sceneOneAnim.play();
+     displayedVidScenes[0].play();
+     sceneNext = 2
+     console.log("playing-scene-1");
+     console.log("playing-vid scene-1");
+     console.log('next scene is ' + sceneNext);
+   }
+  else if (sceneNext === 2) {
     sceneTwoAnim.play();
+    displayedVidScenes[1].play();
     sceneNext = 3
     console.log("playing-scene-2");
+    console.log("playing-vid scene-2");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 3) {
     sceneThreeAnim.play();
+    displayedVidScenes[2].play();
     sceneNext = 4
     console.log("playing-scene-3");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 4) {
     sceneFourAnim.play();
+    displayedVidScenes[3].play();
     sceneNext = 5
     console.log("playing-scene-4");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 5) {
     sceneFiveAnim.play();
+    displayedVidScenes[4].play();
     sceneNext = 6
     console.log("playing-scene-5");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 6) {
     sceneSixAnim.play();
+    displayedVidScenes[5].play();
     sceneNext = 7
     console.log("playing-scene-6");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 7) {
     sceneSevenAnim.play();
+    displayedVidScenes[6].play();
     sceneNext = 8
     console.log("playing-scene-7");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 8) {
     sceneEightAnim.play();
+    displayedVidScenes[7].play();
     sceneNext = 9
     console.log("playing-scene-8");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 9) {
     sceneNineAnim.play();
+    displayedVidScenes[8].play();
     sceneNext = 10
     console.log("playing-scene-9");
     console.log('next scene is ' + sceneNext);
   }
   else if (sceneNext === 10) {
     sceneTenAnim.play();
+    displayedVidScenes[9].play();
     sceneNext = 11
     console.log("playing-scene-10");
     console.log('next scene is ' + sceneNext);
@@ -520,7 +563,7 @@ window.addEventListener("keydown", event => {
     console.log("space pressed")
     console.log("playing-scene-1");
     sceneOneAnim.play();
-    videoStart.play();
+    displayedVidScenes[0].play();
     panelContentUpdater();
   }
 });
