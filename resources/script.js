@@ -359,9 +359,12 @@ function panelContentUpdater() {
    mediaVideo = style.getPropertyValue('--video');
    mediaLottie = style.getPropertyValue('--lottie');
 
-   setTimeout(function(){dimensionValuesGetter(); }, 250);
-   setTimeout(function(){interWidthSetter(); }, 300);
-   setTimeout(function(){mediaSetter(); }, 350);
+   dimensionValuesGetter();
+   interWidthSetter();
+   mediaSetter();
+   // setTimeout(function(){ }, 250);
+   // setTimeout(function(){ }, 300);
+   // setTimeout(function(){ }, 350);
 
    console.log('panel content updated')
 }
@@ -618,3 +621,4 @@ function exitHandler()
 
 // First load function calls
 panelContentUpdater();
+setTimeout(function(){panelContentUpdater(); }, 300);
