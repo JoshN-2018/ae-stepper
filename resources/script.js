@@ -120,8 +120,8 @@ var buttons = document.getElementsByClassName('button');
 
 
 // interlayer dimension values
-var heightRatio = 16
-var widthRatio = 9
+var heightRatio = 9
+var widthRatio = 16
 var interHeight = 0
 var interLayerWidth = 0
 
@@ -358,7 +358,6 @@ function panelContentUpdater() {
    // media type
    mediaVideo = style.getPropertyValue('--video');
    mediaLottie = style.getPropertyValue('--lottie');
-
 
    dimensionValuesGetter();
    interWidthSetter();
@@ -618,6 +617,4 @@ function exitHandler()
 
 
 // First load function calls
-dimensionValuesGetter();
-interWidthSetter();
 panelContentUpdater();
