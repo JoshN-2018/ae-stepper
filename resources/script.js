@@ -362,9 +362,6 @@ function panelContentUpdater() {
    dimensionValuesGetter();
    interWidthSetter();
    mediaSetter();
-   // setTimeout(function(){ }, 250);
-   // setTimeout(function(){ }, 300);
-   // setTimeout(function(){ }, 350);
 
    console.log('panel content updated')
 }
