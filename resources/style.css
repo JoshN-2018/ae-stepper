@@ -13,6 +13,9 @@
 
 .scene {
   /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 html {
@@ -193,11 +196,6 @@ html {
    height: 100% !important;
 }
 
-.scene {
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-}
 
 
 /* elements */
