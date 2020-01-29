@@ -359,9 +359,9 @@ function panelContentUpdater() {
    mediaVideo = style.getPropertyValue('--video');
    mediaLottie = style.getPropertyValue('--lottie');
 
-   dimensionValuesGetter();
-   interWidthSetter();
-   mediaSetter();
+   setTimeout(function(){dimensionValuesGetter(); }, 250);
+   setTimeout(function(){interWidthSetter(); }, 300);
+   setTimeout(function(){mediaSetter(); }, 350);
 
    console.log('panel content updated')
 }
