@@ -246,12 +246,14 @@ function mediaSetter() {
    if (mediaVideo === " 0") {
       for (var i = 0; i < displayedVidScenes.length; i++) {
         displayedVidScenes[i].classList.add("video-off");
+        displayedVidScenes[i].classList.remove("vid-positioning");
         }
       console.log('video off');
    }
    else if (mediaVideo === " 1") {
       for (var i = 0; i < displayedVidScenes.length; i++) {
         displayedVidScenes[i].classList.remove("video-off");
+        displayedVidScenes[i].classList.add("vid-positioning");
         }
       console.log('video on');
    }

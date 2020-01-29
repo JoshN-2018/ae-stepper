@@ -12,7 +12,6 @@
 }
 
 .scene {
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -155,6 +154,10 @@ html {
 }
 .panel-close {
    transform: translateX(-310px);
+}
+
+.vid-positioning {
+  height: 100vh;
 }
 
 
