@@ -4,7 +4,7 @@
 :root {
 
 /* Use video (1 = on, 0 = off) — the default is lottie, if you use video delete lottie data */
-   --video: 1;
+   --video: 0;
 
 
 /* screen ratio (this is the screen dimensions)*/
