@@ -44,71 +44,71 @@ html {
 #inter-1 .button {
   background-color: red;
   /* left: calc(var(--b1-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-  left: calc(var(--b1-pos-left));
-  bottom: calc(var(--b1-pos-bottom));
+  left: var(--b1-pos-left);
+  bottom: var(--b1-pos-bottom);
 }
 
 #inter-2 .button {
   background-color: green;
   /* left: calc(var(--b2-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-  left: calc(var(--b2-pos-left));
-  bottom: calc(var(--b2-pos-bottom));
+  left: var(--b2-pos-left);
+  bottom: var(--b2-pos-bottom);
 }
 
 #inter-3 .button {
   background-color: blue;
   /* left: calc(var(--b3-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-  left: calc(var(--b3-pos-left));
-  bottom: calc(var(--b3-pos-bottom));
+  left: var(--b3-pos-left);
+  bottom: var(--b3-pos-bottom);
 }
 
 #inter-4 .button {
   background-color: yellow;
   /* left: calc(var(--b4-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-  left: calc(var(--b4-pos-left));
-  bottom: calc(var(--b4-pos-bottom));
+  left: var(--b4-pos-left);
+  bottom: var(--b4-pos-bottom);
 }
 
 #inter-5 .button {
    background-color: pink;
    /* left: calc(var(--b5-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-   left: calc(var(--b5-pos-left));
-   bottom: calc(var(--b5-pos-bottom));
+   left: var(--b5-pos-left);
+   bottom: var(--b5-pos-bottom);
 }
 
 #inter-6 .button {
    background-color: brown;
    /* left: calc(var(--b6-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-   left: calc(var(--b6-pos-left));
-   bottom: calc(var(--b6-pos-bottom));
+   left: var(--b6-pos-left);
+   bottom: var(--b6-pos-bottom);
 }
 
 #inter-7 .button {
    background-color: purple;
    /* left: calc(var(--b7-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-   left: calc(var(--b7-pos-left));
-   bottom: calc(var(--b7-pos-bottom));
+   left: var(--b7-pos-left);
+   bottom: var(--b7-pos-bottom);
 }
 
 #inter-8 .button {
    background-color: magenta;
    /* left: calc(var(--b8-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-   left: calc(var(--b8-pos-left));
-   bottom: calc(var(--b8-pos-bottom));
+   left: var(--b8-pos-left);
+   bottom: var(--b8-pos-bottom);
 }
 
 #inter-9 .button {
    background-color: cyan;
    /* left: calc(var(--b9-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-   left: calc(var(--b9-pos-left));
-   bottom: calc(var(--b9-pos-bottom));
+   left: var(--b9-pos-left);
+   bottom: var(--b9-pos-bottom);
 }
 
 #inter-10 .button {
    background-color: maroon;
    /* left: calc(var(--b10-pos-left) - var(--button-width) / 2); Use this code to center buttons*/
-   left: calc(var(--b10-pos-left));
-   bottom: calc(var(--b10-pos-bottom));
+   left: var(--b10-pos-left);
+   bottom: var(--b10-pos-bottom);
 }
 
 
