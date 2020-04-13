@@ -4,7 +4,7 @@
 :root {
 
 /* Use video (1 = on, 0 = off) — the default is lottie, if you use video delete lottie data */
-   --video: 0;
+   --video: 1;
 
 
 /* screen ratio (this is the screen dimensions)*/
@@ -13,8 +13,8 @@
 
 
 /* button size values (affects all buttons) */
- --button-height: 8%;
- --button-width: 20%;
+ --button-height: 50%;
+ --button-width: 50%;
 
 
 /* button position values */
