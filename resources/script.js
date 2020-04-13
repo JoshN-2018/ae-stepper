@@ -5,7 +5,7 @@
 var sceneOneAnim = lottie.loadAnimation({
    container: document.getElementById('scene-1'),
    renderer: 'svg',
-   loop: false,
+   loop: true,
    autoplay: false,
    path: 'lottie-scenes/scene-1/data.json'
 })
