@@ -13,31 +13,31 @@
 
 
 /* button size values (affects all buttons) */
- --button-height: 50%;
- --button-width: 50%;
+ --button-height: 15%;
+ --button-width: 15%;
 
 
 /* button position values */
 
     /* button-1-position */
     --b1-pos-left: 5%;
-    --b1-pos-bottom: 90%;
+    --b1-pos-bottom: 100%;
 
     /* button-2-position */
     --b2-pos-left: 50%;
-    --b2-pos-bottom: 40%;
+    --b2-pos-bottom: 90%;
 
     /* button-3-position */
     --b3-pos-left: 50%;
-    --b3-pos-bottom: 30%;
+    --b3-pos-bottom: 80%;
 
     /* button-4-position */
-    --b4-pos-left: 0%;
-    --b4-pos-bottom: 90%;
+    --b4-pos-left: 50%;
+    --b4-pos-bottom: 70%;
 
     /* button-5-position */
-    --b5-pos-left: 0%;
-    --b5-pos-bottom: 90%;
+    --b5-pos-left: 50%;
+    --b5-pos-bottom: 60%;
 
     /* button-6-position */
     --b6-pos-left: 50%;
