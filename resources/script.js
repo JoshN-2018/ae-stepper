@@ -559,15 +559,15 @@ window.addEventListener("keydown", event => {
 });
 
 //space fire
-window.addEventListener("keydown", event => {
-  if (event.keyCode == 32) {
-    console.log("space pressed")
-    console.log("playing-scene-1");
-    sceneOneAnim.play();
-    displayedVidScenes[0].play();
-    panelContentUpdater();
-  }
-});
+// window.addEventListener("keydown", event => {
+//   if (event.keyCode == 32) {
+//     console.log("space pressed")
+//     console.log("playing-scene-1");
+//     sceneOneAnim.play();
+//     displayedVidScenes[0].play();
+//     panelContentUpdater();
+//   }
+// });
 
 //'C' fire
 window.addEventListener("keydown", event => {
