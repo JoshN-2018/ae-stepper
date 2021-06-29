@@ -9,54 +9,54 @@
 
 
 /* screen ratio (this is the screen dimensions)*/
- --screen-ratio-X: 1920;
- --screen-ratio-Y: 1080;
+ --screen-ratio-X: 1536;
+ --screen-ratio-Y: 960;
 
 
 /* button size values (affects all buttons) */
- --button-height: 8%;
- --button-width: 15%;
+ --button-height: 100%;
+ --button-width: 100%;
 
 
 /* button position values */
 
     /* button-1-position */
-    --b1-pos-left: 50%;
-    --b1-pos-bottom: 90%;
+    --b1-pos-left: 0%;
+    --b1-pos-bottom: 0%;
 
     /* button-2-position */
-    --b2-pos-left: 50%;
-    --b2-pos-bottom: 90%;
+    --b2-pos-left: 0%;
+    --b2-pos-bottom: 0%;
 
     /* button-3-position */
-    --b3-pos-left: 50%;
-    --b3-pos-bottom: 80%;
+    --b3-pos-left: 0%;
+    --b3-pos-bottom: 0%;
 
     /* button-4-position */
-    --b4-pos-left: 50%;
-    --b4-pos-bottom: 70%;
+    --b4-pos-left: 0%;
+    --b4-pos-bottom: 0%;
 
     /* button-5-position */
-    --b5-pos-left: 50%;
-    --b5-pos-bottom: 60%;
+    --b5-pos-left: 0%;
+    --b5-pos-bottom: 0%;
 
     /* button-6-position */
-    --b6-pos-left: 50%;
-    --b6-pos-bottom: 50%;
+    --b6-pos-left: 0%;
+    --b6-pos-bottom: 0%;
 
     /* button-7-position */
-    --b7-pos-left: 50%;
-    --b7-pos-bottom: 40%;
+    --b7-pos-left: 0%;
+    --b7-pos-bottom: 0%;
 
     /* button-8-position */
-    --b8-pos-left: 50%;
-    --b8-pos-bottom: 30%;
+    --b8-pos-left: 0%;
+    --b8-pos-bottom: 0%;
 
     /* button-9-position */
-    --b9-pos-left: 50%;
-    --b9-pos-bottom: 20%;
+    --b9-pos-left: 0%;
+    --b9-pos-bottom: 0%;
 
     /* button-10-position */
-    --b10-pos-left: 50%;
-    --b10-pos-bottom: 10%;
+    --b10-pos-left: 0%;
+    --b10-pos-bottom: 0%;
 }
